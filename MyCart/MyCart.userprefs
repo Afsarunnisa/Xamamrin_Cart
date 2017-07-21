@@ -1,0 +1,34 @@
+﻿<Properties StartupConfiguration="{DE47E446-8EBB-419F-ADC5-046B6A7A964C}|Default">
+  <MonoDevelop.Ide.ItemProperties.MyCart.Droid PreferredExecutionTarget="Android.Android_Accelerated_x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MyCart/ViewModel/MyCartViewModel.cs">
+    <Files>
+      <File FileName="MyCart/ViewModel/MyCartViewModel.cs" Line="37" Column="57" />
+      <File FileName="MyCart/Data/IRestService.cs" Line="20" Column="9" />
+      <File FileName="MyCart/Data/RestService.cs" Line="128" Column="1" />
+      <File FileName="MyCart/Models/Cart.cs" Line="62" Column="9" />
+      <File FileName="MyCart/Models/Products.cs" Line="18" Column="49" />
+      <File FileName="MyCart/Data/ApiManager.cs" Line="32" Column="39" />
+      <File FileName="MyCart/ViewModel/AllProductsListViewModel.cs" Line="68" Column="9" />
+      <File FileName="MyCart/Views/MyCartPage.xaml.cs" Line="17" Column="1" />
+      <File FileName="MyCart/Views/AllProductsListPage.xaml" Line="40" Column="24" />
+      <File FileName="MyCart/Views/AllProductsListPage.xaml.cs" Line="46" Column="9" />
+      <File FileName="MyCart/Views/MyCartPage.xaml" Line="10" Column="61" />
+      <File FileName="MyCart/Views/ProductDetailsPage.xaml" Line="42" Column="1" />
+      <File FileName="MyCart/Views/MainPage.xaml.cs" Line="25" Column="33" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/wavelabs/Projects/MyCart/MyCart/Data/RestService.cs" relfile="MyCart/Data/RestService.cs" line="134" column="1" />
+      <Breakpoint file="/Users/wavelabs/Projects/MyCart/MyCart/Data/RestService.cs" relfile="MyCart/Data/RestService.cs" line="110" column="1" />
+      <Breakpoint file="/Users/wavelabs/Projects/MyCart/MyCart/Data/RestService.cs" relfile="MyCart/Data/RestService.cs" line="118" column="60" />
+      <Breakpoint file="/Users/wavelabs/Projects/MyCart/MyCart/Data/RestService.cs" relfile="MyCart/Data/RestService.cs" line="99" column="1" />
+      <Breakpoint file="/Users/wavelabs/Projects/MyCart/MyCart/Data/RestService.cs" relfile="MyCart/Data/RestService.cs" line="128" column="67" />
+      <Breakpoint file="/Users/wavelabs/Projects/MyCart/MyCart/Data/RestService.cs" relfile="MyCart/Data/RestService.cs" line="121" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.MyCart.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.4AC34787-AD8C-40DB-854D-79DF6E838DCF" />
+</Properties>

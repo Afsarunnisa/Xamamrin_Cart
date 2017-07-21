@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="MyCart.Views.ProductDetailsPage">
+    
+	<ContentPage.Content>
+
+        <StackLayout Spacing="10">
+
+                <ScrollView  >
+                    <StackLayout Spacing="10" x:Name="layout">
+
+                        <Label TextColor="Black" FontSize = "24" Text="{Binding name}" FontAttributes="Bold"/>
+                        <Image Source="{Binding image}" />
+
+                        <StackLayout Spacing="10" Orientation="Horizontal">
+                            <Label TextColor="Gray" FontSize = "18" Text="Price:" />
+                            <Label TextColor="Black" FontSize = "18" Text="{Binding price}" FontAttributes="Bold" />
+                        </StackLayout>
+
+                        <StackLayout Spacing="10" Orientation="Horizontal">
+                            <Label TextColor="Gray" FontSize = "18" Text="SKU:" />
+                            <Label TextColor="Black" FontSize = "18" Text="{Binding sku}" FontAttributes="Bold" />
+                        </StackLayout>
+
+
+                        <Label TextColor="Gray" FontSize = "18" Text="Description:" />
+                        <Label TextColor="Black" FontSize = "18" Text="{Binding description}" />
+
+
+                    </StackLayout>
+                </ScrollView>
+
+                <Button Text="Add to cart"  TextColor="Black" HeightRequest = "50" BackgroundColor = "Gray" VerticalOptions="End" Clicked="Add_Cart_Clicked"/>
+
+            </StackLayout>
+
+        
+	</ContentPage.Content>
+    
+</ContentPage>
