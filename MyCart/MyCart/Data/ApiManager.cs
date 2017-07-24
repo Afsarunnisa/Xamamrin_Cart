@@ -22,9 +22,9 @@ namespace MyCart.Data
             return restService.GetTokenAsync();
 		}
 
-        public Task<List<Products>> GetProducts(){
+        public Task<List<Products>> GetProducts(string productId){
 
-            return restService.GetAllProducts();
+            return restService.GetAllProducts(productId);
 
 		}
 

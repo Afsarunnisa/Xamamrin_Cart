@@ -52,10 +52,23 @@ namespace MyCart.Data
         }
 
 
-        public async Task<List<Products>> GetAllProducts()
+        public async Task<List<Products>> GetAllProducts(string productId)
         {
 
-            var url = string.Format(Constants.ProductsUrl);
+			Debug.WriteLine(@"   productId {0}", productId);
+
+			var url = "";
+
+            if(productId == "0"){
+                url = string.Format(Constants.ProductsUrl);
+            }else{
+
+				var productUrlStr = Constants.ProductsUrl + "category/" + productId;
+
+				url = string.Format(productUrlStr);
+			}
+
+
             var uri = new Uri(url);
 
             Debug.WriteLine(@"   url {0}", url);
@@ -112,7 +125,13 @@ namespace MyCart.Data
 
 				Debug.WriteLine(@"   content string {0}", content);
 
-				//C resp = JsonConvert.DeserializeObject<ProductResponse>(content);
+                CategoryResponse resp = JsonConvert.DeserializeObject<CategoryResponse>(content);
+
+				Debug.WriteLine(@"   content {0}", content);
+
+				return resp.data;
+
+
 
 				//Debug.WriteLine(@"   content {0}", content);
 			}

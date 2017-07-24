@@ -7,6 +7,7 @@ using MyCart.Models;
 using MyCart.Views;
 using MyCart.Data;
 
+using System.Diagnostics;
 
 
 namespace MyCart.Views
@@ -52,7 +53,17 @@ namespace MyCart.Views
 			var item = (MenuItemModel)e.SelectedItem;
 			Type page = item.TargetType;
 
-			Detail = new NavigationPage((Page)Activator.CreateInstance(page));
+            Debug.WriteLine("page {0}", page);
+
+            if(item.Title == "All Products"){
+				Page displayPage = (Page)Activator.CreateInstance(page, "0");
+				Detail = new NavigationPage(displayPage);
+            }else{
+				Detail = new NavigationPage((Page)Activator.CreateInstance(page));
+			}
+
+ 
+
 			IsPresented = false;
 		}
 

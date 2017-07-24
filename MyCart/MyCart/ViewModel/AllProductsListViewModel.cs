@@ -17,7 +17,6 @@ namespace MyCart.ViewModel
     public class AllProductsListViewModel : INotifyPropertyChanged
     {
 
-
         private ObservableCollection<Products> products;
 		public ObservableCollection<Products> Products
 		{
@@ -30,28 +29,32 @@ namespace MyCart.ViewModel
 		}
 
 
-        public AllProductsListViewModel()
+        public AllProductsListViewModel(string productID)
         {
-            Products = new ObservableCollection<Products>();
 
-			this.GetProducts();
+            Debug.WriteLine("productID {0}", productID);
+
+			Products = new ObservableCollection<Products>();
+
+            this.GetProducts(productID);
 
 			//App.RestApiManager.GetProducts();
         }
 
 
-		private async void GetProducts()
+		private async void GetProducts(string productID)
 		{
 			try
 			{
-                List<Products> data = await App.RestApiManager.GetProducts();
+
+                Debug.WriteLine("productID in viewmodel {0}", productID);
+
+                List<Products> data = await App.RestApiManager.GetProducts(productID);
 
 				Debug.WriteLine("data {0}", data);
 
                 foreach (var product in data)
 				{
-					Debug.WriteLine("product {0}", product.name);
-					//Items.Add(new Products() { name =  product.name, image = product.image });
 					Products.Add(product);
 				}
 			}

@@ -3,5 +3,35 @@
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             x:Class="MyCart.Views.CategoriesListPage">
 	<ContentPage.Content>
+      <ListView ItemsSource="{Binding Categories}"
+                      CachingStrategy="RecycleElement"
+                      RowHeight="120" x:Name="CategoriesListView" ItemSelected="OnCategorySelected">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Margin="8" Orientation="Horizontal" >
+
+                                <Image Source="{Binding image}" />
+
+
+                                <StackLayout Margin="8"  >
+
+                                <Label Text="{Binding name}"
+                                       FontAttributes="Bold" />
+
+<!--                                <Label Text="{Binding price}"  />
+-->                                </StackLayout>
+
+                            </StackLayout>
+                        </ViewCell>
+
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+        
 	</ContentPage.Content>
 </ContentPage>

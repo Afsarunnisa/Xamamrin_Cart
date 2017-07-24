@@ -14,12 +14,13 @@ namespace MyCart.Views
 {
     public partial class AllProductsListPage : ContentPage
     {
-        public AllProductsListPage()
+        public AllProductsListPage(string productID)
         {
             InitializeComponent();
 
+            Debug.WriteLine("productID {0}", productID);
 
-            BindingContext = new AllProductsListViewModel();
+            BindingContext = new AllProductsListViewModel(productID);
 
 
 

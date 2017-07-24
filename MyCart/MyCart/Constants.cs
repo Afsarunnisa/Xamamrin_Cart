@@ -8,7 +8,7 @@ namespace MyCart
 
 		public static string TokenUrl = "http://oc.qa.nbos.in/api/rest/oauth2/token/client_credentials";
 
-		public static string ProductsUrl = "http://oc.qa.nbos.in/api/rest/products";
+		public static string ProductsUrl = "http://oc.qa.nbos.in/api/rest/products/";
 		public static string CategoriesUrl = "http://oc.qa.nbos.in/api/rest/categories";
 
 
