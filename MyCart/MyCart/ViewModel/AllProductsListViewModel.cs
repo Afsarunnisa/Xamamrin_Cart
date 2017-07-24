@@ -32,13 +32,9 @@ namespace MyCart.ViewModel
         public AllProductsListViewModel(string productID, string storeID)
         {
 
-            Debug.WriteLine("productID {0}", productID);
-
 			Products = new ObservableCollection<Products>();
-
             this.GetProducts(productID, storeID);
 
-			//App.RestApiManager.GetProducts();
         }
 
 
@@ -47,14 +43,7 @@ namespace MyCart.ViewModel
 			try
 			{
 
-                Debug.WriteLine("productID in viewmodel {0}", productID);
-
                 List<Products> data = await App.RestApiManager.GetProducts(productID, storeID);
-
-				Debug.WriteLine("data {0}", data);
-
-                Debug.WriteLine("data count {0}", data.Count());
-
 
 				foreach (var product in data)
 				{
@@ -71,7 +60,5 @@ namespace MyCart.ViewModel
 		public event PropertyChangedEventHandler PropertyChanged;
 		void OnPropertyChanged([CallerMemberName]string propertyName = "") =>
 			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-
-
 	}
 }

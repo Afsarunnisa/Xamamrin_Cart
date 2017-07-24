@@ -18,12 +18,7 @@ namespace MyCart.Views
         public ProductDetailsPage(Products product)
         {
             InitializeComponent();
-
-            Debug.WriteLine("product val {0}", product.name);
-			Debug.WriteLine("product images  {0}", product.images);
-
-			BindingContext = product;
-
+     		BindingContext = product;
             currentProduct = product;
 
         }

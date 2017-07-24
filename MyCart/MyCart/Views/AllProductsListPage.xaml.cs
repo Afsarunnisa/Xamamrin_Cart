@@ -19,8 +19,9 @@ namespace MyCart.Views
             InitializeComponent();
 
             Debug.WriteLine("productID {0}", productID);
+            Debug.WriteLine("StoreID {0}", storeID);
 
-            BindingContext = new AllProductsListViewModel(productID, storeID);
+			BindingContext = new AllProductsListViewModel(productID, storeID);
 
         }
 

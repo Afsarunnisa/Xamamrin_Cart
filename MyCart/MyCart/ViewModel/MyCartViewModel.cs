@@ -64,12 +64,8 @@ namespace MyCart.ViewModel
 			{
 				Cart cartData = await App.RestApiManager.GetCart();
 
-				Debug.WriteLine("data {0}", cartData);
-
                 foreach (var product in cartData.data.products)
 				{
-					Debug.WriteLine("product {0}", product.name);
-					//Items.Add(new Products() { name =  product.name, image = product.image });
 					CartItems.Add(product);
 				}
 			}

@@ -44,8 +44,6 @@ namespace MyCart.ViewModel
 
                 List<Store> data = await App.RestApiManager.GetStores();
 
-				Debug.WriteLine("data {0}", data);
-
 				foreach (var store in data)
 				{
                     Stores.Add(store);

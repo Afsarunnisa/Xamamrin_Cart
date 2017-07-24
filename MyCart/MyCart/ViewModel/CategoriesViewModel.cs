@@ -44,12 +44,8 @@ namespace MyCart.ViewModel
             try{
                 List<Category> data = await App.RestApiManager.GetCategories();
 
-				Debug.WriteLine("data {0}", data);
-
 				foreach (var category in data)
 				{
-					Debug.WriteLine("product {0}", category.name);
-					//Items.Add(new Products() { name =  product.name, image = product.image });
                     Categories.Add(category);
 				}
 			}

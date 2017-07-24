@@ -55,7 +55,6 @@ namespace MyCart.Views
 			var item = (MenuItemModel)e.SelectedItem;
 			Type page = item.TargetType;
 
-            Debug.WriteLine("page {0}", page);
 
             if(item.Title == "All Products"){
 				Page displayPage = (Page)Activator.CreateInstance(page, "0");
