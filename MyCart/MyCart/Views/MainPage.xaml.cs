@@ -24,12 +24,13 @@ namespace MyCart.Views
 			menuList = new List<MenuItemModel>();
 
 			var page1 = new MenuItemModel() { Title = "Home", Icon = "", TargetType = typeof(DashboardPage) };
-			var page2 = new MenuItemModel() { Title = "All Products", Icon = "", TargetType = typeof(AllProductsListPage) };
-			var page3 = new MenuItemModel() { Title = "Featured Products", Icon = "", TargetType = typeof(DashboardPage) };
-			var page4 = new MenuItemModel() { Title = "Categories", Icon = "", TargetType = typeof(CategoriesListPage) };
-			var page5 = new MenuItemModel() { Title = "WishList", Icon = "", TargetType = typeof(WishListPage) };
-			var page6 = new MenuItemModel() { Title = "Contact us", Icon = "", TargetType = typeof(DashboardPage) };
-			var page7 = new MenuItemModel() { Title = "Login", Icon = "", TargetType = typeof(DashboardPage) };
+            var page2 = new MenuItemModel() { Title = "Stores", Icon = "", TargetType = typeof(StoresListPage) };
+			var page3 = new MenuItemModel() { Title = "All Products", Icon = "", TargetType = typeof(AllProductsListPage) };
+			var page4 = new MenuItemModel() { Title = "Featured Products", Icon = "", TargetType = typeof(DashboardPage) };
+			var page5 = new MenuItemModel() { Title = "Categories", Icon = "", TargetType = typeof(CategoriesListPage) };
+			var page6 = new MenuItemModel() { Title = "WishList", Icon = "", TargetType = typeof(WishListPage) };
+			var page7 = new MenuItemModel() { Title = "Contact us", Icon = "", TargetType = typeof(DashboardPage) };
+			var page8 = new MenuItemModel() { Title = "Login", Icon = "", TargetType = typeof(DashboardPage) };
 
 			menuList.Add(page1);
 			menuList.Add(page2);
@@ -38,6 +39,7 @@ namespace MyCart.Views
 			menuList.Add(page5);
 			menuList.Add(page6);
 			menuList.Add(page7);
+			menuList.Add(page8);
 
 			menuListView.ItemsSource = menuList;
 

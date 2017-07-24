@@ -51,6 +51,9 @@
     <EmbeddedResource Include="Views\WishListPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\StoresListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -94,6 +97,11 @@
       <DependentUpon>WishListPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\WishListViewModel.cs" />
+    <Compile Include="Views\StoresListPage.xaml.cs">
+      <DependentUpon>StoresListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\StoresListViewModel.cs" />
+    <Compile Include="Models\Store.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">

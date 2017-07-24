@@ -48,5 +48,6 @@
 /Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/obj/Debug/MyCart.Views.MyCartPage.xaml.g.cs
 /Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/obj/Debug/MyCart.Views.CategoriesListPage.xaml.g.cs
 /Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/obj/Debug/MyCart.Views.WishListPage.xaml.g.cs
+/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/obj/Debug/MyCart.Views.StoresListPage.xaml.g.cs
 /Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/obj/Debug/MyCart.dll
 /Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/obj/Debug/MyCart.pdb

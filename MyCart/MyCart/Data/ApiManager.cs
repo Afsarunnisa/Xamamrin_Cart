@@ -22,9 +22,9 @@ namespace MyCart.Data
             return restService.GetTokenAsync();
 		}
 
-        public Task<List<Products>> GetProducts(string productId){
+        public Task<List<Products>> GetProducts(string productId, string storeID){
 
-            return restService.GetAllProducts(productId);
+            return restService.GetAllProducts(productId, storeID);
 
 		}
 
@@ -43,6 +43,10 @@ namespace MyCart.Data
             return restService.GetCart();
 		}
 
+        public Task<List<Store>> GetStores()
+		{
+            return restService.GetAllStores();
+		}
 
 	}
 }

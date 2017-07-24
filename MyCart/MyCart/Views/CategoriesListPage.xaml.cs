@@ -27,7 +27,7 @@ namespace MyCart.Views
 			Debug.WriteLine(@"   item {0}", item.name);
 			Debug.WriteLine(@"   item id {0}", item.category_id);
 
-			Navigation.PushAsync(new AllProductsListPage(item.category_id));
+			Navigation.PushAsync(new AllProductsListPage(item.category_id, "0"));
 
 		}
 

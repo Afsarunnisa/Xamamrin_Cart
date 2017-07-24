@@ -51,8 +51,50 @@ namespace MyCart.Data
 
         }
 
+        public async Task<List<Store>> GetAllStores(){
 
-        public async Task<List<Products>> GetAllProducts(string productId)
+
+
+			var url = string.Format(Constants.StoreUrl);
+			var uri = new Uri(url);
+
+			Debug.WriteLine(@"   url {0}", url);
+
+
+            try{
+                
+				string token = "";
+
+				if (App.Current.Properties.ContainsKey("AccessToken"))
+				{
+					token = App.Current.Properties["AccessToken"] as string;
+				}
+
+				client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+				var response = await client.GetAsync(url);
+				var content = await response.Content.ReadAsStringAsync();
+
+				Debug.WriteLine(@"   content string {0}", content);
+
+                StoreResponse resp = JsonConvert.DeserializeObject<StoreResponse>(content);
+
+				Debug.WriteLine(@"   content {0}", content);
+
+				return resp.data;
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(@"   ERROR {0}", ex.Message);
+			}
+
+			return null;
+
+		}
+
+
+
+		public async Task<List<Products>> GetAllProducts(string productId, string storeID)
         {
 
 			Debug.WriteLine(@"   productId {0}", productId);
@@ -82,6 +124,18 @@ namespace MyCart.Data
                 }
 
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+				Debug.WriteLine(@"   token {0}", token);
+
+
+				Debug.WriteLine(@"   storeID {0}", storeID);
+
+				if (storeID != "0"){
+
+                    client.DefaultRequestHeaders.Add("X-Oc-Store-Id", storeID);
+
+                }
+
 
                 var response = await client.GetAsync(url);
                 var content = await response.Content.ReadAsStringAsync();

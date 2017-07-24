@@ -12,13 +12,17 @@ namespace MyCart.Data
 
         Task GetTokenAsync();
 
-        Task <List<Products>> GetAllProducts(string productId);
+        Task <List<Products>> GetAllProducts(string productId, string storeID);
         Task<List<Category>> GetAllCategories();
 
 
 		Task AddToCart(AddCart cart);
 
         Task <Cart>GetCart();
+
+
+		Task<List<Store>> GetAllStores();
+
 
 	}
 
