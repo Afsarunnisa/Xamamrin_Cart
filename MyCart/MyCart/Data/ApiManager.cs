@@ -28,6 +28,11 @@ namespace MyCart.Data
 
 		}
 
+        public Task<List<Category>> GetCategories()
+		{
+            return restService.GetAllCategories();
+		}
+
 
         public Task AddToCart(AddCart cart){
             return restService.AddToCart(cart);
@@ -36,7 +41,6 @@ namespace MyCart.Data
         public Task<Cart> GetCart()
         {
             return restService.GetCart();
-
 		}
 
 

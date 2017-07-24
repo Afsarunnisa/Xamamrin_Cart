@@ -322,16 +322,16 @@ namespace MyCart.Models
 
 	}
 
-    public class Category
-	{
+ //   public class Category
+	//{
 
-		[JsonProperty("name")]
-		public string name { get; set; }
+		//[JsonProperty("name")]
+		//public string name { get; set; }
 
-		[JsonProperty("id")]
-		public string id { get; set; }
+		//[JsonProperty("id")]
+		//public string id { get; set; }
        
-    }
+    //}
 
     public class Reviews{
 

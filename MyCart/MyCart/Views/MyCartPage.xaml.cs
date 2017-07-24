@@ -13,9 +13,12 @@ namespace MyCart.Views
         public MyCartPage()
         {
             InitializeComponent();
-
             BindingContext = new MyCartViewModel();
-
         }
-    }
+
+		void Checkout_Cart_Clicked(object sender, EventArgs e)
+        {
+            
+        }
+	}
 }

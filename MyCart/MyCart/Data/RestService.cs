@@ -91,7 +91,44 @@ namespace MyCart.Data
 
         }
 
-        public async Task<Cart> GetCart(){
+        public async Task<List<Category>> GetAllCategories(){
+
+			var url = string.Format(Constants.CategoriesUrl);
+			var uri = new Uri(url);
+
+			Debug.WriteLine(@"   url {0}", url);
+
+            try{
+				string token = "";
+				if (App.Current.Properties.ContainsKey("AccessToken"))
+				{
+					token = App.Current.Properties["AccessToken"] as string;
+				}
+
+				client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+				var response = await client.GetAsync(url);
+				var content = await response.Content.ReadAsStringAsync();
+
+				Debug.WriteLine(@"   content string {0}", content);
+
+				//C resp = JsonConvert.DeserializeObject<ProductResponse>(content);
+
+				//Debug.WriteLine(@"   content {0}", content);
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(@"   ERROR {0}", ex.Message);
+			}
+
+			return null;
+
+		}
+
+
+
+
+		public async Task<Cart> GetCart(){
 
 			var url = string.Format(Constants.CartUrl);
 			var uri = new Uri(url);

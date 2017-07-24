@@ -35,6 +35,10 @@
                     </ListView.ItemTemplate>
 
         </ListView>
+
+        <Button Text="Guest checkout"  TextColor="Black" HeightRequest = "50" BackgroundColor = "Gray" VerticalOptions="End" Clicked="Checkout_Cart_Clicked"/>
+
+            
     </StackLayout>
 
         

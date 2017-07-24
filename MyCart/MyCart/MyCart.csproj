@@ -45,6 +45,12 @@
     <EmbeddedResource Include="Views\MyCartPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\CategoriesListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\WishListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -79,6 +85,15 @@
     </Compile>
     <Compile Include="ViewModel\MyCartViewModel.cs" />
     <Compile Include="Models\Cart.cs" />
+    <Compile Include="ViewModel\CategoriesViewModel.cs" />
+    <Compile Include="Views\CategoriesListPage.xaml.cs">
+      <DependentUpon>CategoriesListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Views\WishListPage.xaml.cs">
+      <DependentUpon>WishListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\WishListViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
