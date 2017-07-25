@@ -10,6 +10,12 @@ namespace MyCart.Views
         public GuestCheckOutPage()
         {
             InitializeComponent();
+            BindingContext = new GuestCheckOutPage();
+
+
+
+
+            nextBtn.CommandParameter = 
         }
 
 		private void Login_Clicked(object sender, EventArgs e)

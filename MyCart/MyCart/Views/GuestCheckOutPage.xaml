@@ -15,33 +15,32 @@
                <Label TextColor="#77d065" FontSize = "20" Text="Your Personal Details" />
 
                 <Entry Placeholder="First Name"
-                       Text="{Binding FirstName}"/>
+                       Text="{Binding firstname, Mode=TwoWay}"/>
                 <Entry Placeholder="Last Name"
-                       Text="{Binding LastName}"/>
+                       Text="{Binding lastname, Mode=TwoWay}"/>
                 <Entry Placeholder="E-Mail"
-                       Text="{Binding EMail}"/>
+                       Text="{Binding email, Mode=TwoWay}"/>
                 <Entry Placeholder="Telephone"
-                       Text="{Binding Telephone}"/>
+                       Text="{Binding telephone, Mode=TwoWay}"/>
 
                 <Label TextColor="#77d065" FontSize = "20" Text="Your Address" />
 
 
                  <Entry Placeholder="Address"
-                       Text="{Binding Address}"/>
+                       Text="{Binding address_1, Mode=TwoWay}"/>
                 <Entry Placeholder="City"
-                       Text="{Binding City}"/>
+                       Text="{Binding city, Mode=TwoWay}"/>
                 <Entry Placeholder="PostCode"
-                       Text="{Binding PostCode}"/>
+                       Text="{Binding postcode, Mode=TwoWay}"/>
                 <Entry Placeholder="Country"
-                       Text="{Binding Country}"/>
+                       Text="{Binding country_id, Mode=TwoWay}"/>
 
                 <Entry Placeholder="State"
-                       Text="{Binding State}"/>
+                       Text="{Binding State, Mode=TwoWay}" />
                  
-            <Button Text="Next" TextColor="White"
+            <Button x:Name="nextBtn" Text="Next" TextColor="White"
                 BackgroundColor="#77D065"
-                Command="{Binding LoginCommand}" VerticalOptions="End"/>
-
+                Command="{Binding NextBtnCommand}" VerticalOptions="End"/>
 
             </StackLayout>
         </ScrollView>
