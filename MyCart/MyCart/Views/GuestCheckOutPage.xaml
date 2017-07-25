@@ -11,32 +11,32 @@
     
 	<ContentPage.Content>
         <ScrollView>
-         <StackLayout Spacing="20" Padding="20">
+         <StackLayout Spacing="20" Padding="20" >
                <Label TextColor="#77d065" FontSize = "20" Text="Your Personal Details" />
 
-                <Entry Placeholder="First Name"
-                       Text="{Binding firstname, Mode=TwoWay}"/>
-                <Entry Placeholder="Last Name"
-                       Text="{Binding lastname, Mode=TwoWay}"/>
-                <Entry Placeholder="E-Mail"
-                       Text="{Binding email, Mode=TwoWay}"/>
-                <Entry Placeholder="Telephone"
-                       Text="{Binding telephone, Mode=TwoWay}"/>
+                <Entry x:Name="FirstName" Placeholder="First Name"
+                       Text="{Binding GuestUserObject.firstname}"/>
+                <Entry x:Name="LastName" Placeholder="Last Name"
+                       Text="{Binding GuestUserObject.lastname}"/>
+                <Entry x:Name="Email" Placeholder="E-Mail"
+                       Text="{Binding GuestUserObject.email}"/>
+                <Entry x:Name="Telephone" Placeholder="Telephone"
+                       Text="{Binding GuestUserObject.telephone}"/>
 
                 <Label TextColor="#77d065" FontSize = "20" Text="Your Address" />
 
 
-                 <Entry Placeholder="Address"
-                       Text="{Binding address_1, Mode=TwoWay}"/>
-                <Entry Placeholder="City"
-                       Text="{Binding city, Mode=TwoWay}"/>
-                <Entry Placeholder="PostCode"
-                       Text="{Binding postcode, Mode=TwoWay}"/>
-                <Entry Placeholder="Country"
-                       Text="{Binding country_id, Mode=TwoWay}"/>
+                 <Entry x:Name="Address" Placeholder="Address"
+                       Text="{Binding GuestUserObject.address_1}"/>
+                <Entry x:Name="City" Placeholder="City"
+                       Text="{Binding GuestUserObject.city}"/>
+                <Entry x:Name="PostCode" Placeholder="PostCode"
+                       Text="{Binding GuestUserObject.postcode}"/>
+                <Entry x:Name="Country" Placeholder="Country"
+                       Text="{Binding GuestUserObject.country_id}"/>
 
-                <Entry Placeholder="State"
-                       Text="{Binding State, Mode=TwoWay}" />
+                <Entry x:Name="State" Placeholder="State"
+                       Text="{Binding GuestUserObject.State}" />
                  
             <Button x:Name="nextBtn" Text="Next" TextColor="White"
                 BackgroundColor="#77D065"

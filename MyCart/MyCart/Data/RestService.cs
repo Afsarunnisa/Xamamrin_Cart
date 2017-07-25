@@ -233,5 +233,110 @@ namespace MyCart.Data
 
 
         }
-    }
+
+
+		// Add guest user 
+
+        public async Task<Boolean> AddGuestUser(GuestUser user){
+
+			var url = string.Format(Constants.AddGuestUserUrl);
+			var uri = new Uri(url);
+
+            try{
+				string token = "";
+				if (App.Current.Properties.ContainsKey("AccessToken"))
+				{
+					token = App.Current.Properties["AccessToken"] as string;
+				}
+
+				Debug.WriteLine(@"   token {0}", token);
+
+				client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+				var json = JsonConvert.SerializeObject(user);
+				var content = new StringContent(json, Encoding.UTF8, "application/json");
+				var response = await client.PostAsync(uri, content);
+				var respContent = await response.Content.ReadAsStringAsync();
+
+				Debug.WriteLine(@"   respContent {0}", respContent);
+
+
+				return true;
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(@"   ERROR {0}", ex.Message);
+				return false;
+			}
+
+		}
+
+
+
+
+        public async Task<List<PaymentMethods>> GetPaymentMethods()
+        {
+			var url = string.Format(Constants.PaymentMethodsUrl);
+			var uri = new Uri(url);
+
+            try{
+
+				string token = "";
+				if (App.Current.Properties.ContainsKey("AccessToken"))
+				{
+					token = App.Current.Properties["AccessToken"] as string;
+				}
+
+				Debug.WriteLine(@"   token {0}", token);
+
+				client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+				var response = await client.GetAsync(uri);
+				var respContent = await response.Content.ReadAsStringAsync();
+
+				Debug.WriteLine(@"   respContent {0}", respContent);
+
+
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(@"   ERROR {0}", ex.Message);
+			}
+
+            return null;
+
+		}
+
+        public async Task<Boolean> SetPaymentMethods(PostPaymentMethods payment){
+
+			var url = string.Format(Constants.PaymentMethodsUrl);
+			var uri = new Uri(url);
+
+            try{
+				string token = "";
+				if (App.Current.Properties.ContainsKey("AccessToken"))
+				{
+					token = App.Current.Properties["AccessToken"] as string;
+				}
+
+				var json = JsonConvert.SerializeObject(payment);
+				var content = new StringContent(json, Encoding.UTF8, "application/json");
+				var response = await client.PostAsync(uri, content);
+				var respContent = await response.Content.ReadAsStringAsync();
+
+				Debug.WriteLine(@"   respContent {0}", respContent);
+
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(@"   ERROR {0}", ex.Message);
+			}
+
+            return false;
+
+		}
+
+
+
+
+	}
 }

@@ -23,9 +23,13 @@ namespace MyCart.Data
         Task<Boolean> AddToCart(AddCart cart);
         Task <Cart>GetCart();
 
+        Task<Boolean> AddGuestUser(GuestUser user);
+
+
+        Task <List<PaymentMethods>> GetPaymentMethods();
+        Task<Boolean> SetPaymentMethods(PostPaymentMethods payment);
 
 
 
 	}
-
 }

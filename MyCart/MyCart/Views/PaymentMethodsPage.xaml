@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="MyCart.Views.PaymentMethodsPage"
+            Title="Confirm Checkout">
+	<ContentPage.Content>
+
+    <StackLayout Spacing="20" Padding="20" >
+
+        <Label Text = "Cash on delivery" />
+
+
+
+        <Button x:Name="CheckOut" Text="Checkout" TextColor="White"
+            BackgroundColor="#77D065" VerticalOptions="End"/>
+
+       <!-- <Button x:Name="CheckOut" Text="Checkout" TextColor="White"
+                BackgroundColor="#77D065"
+                Command="{Binding CheckoutBtnCommand}" VerticalOptions="End"/>-->
+
+
+    </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

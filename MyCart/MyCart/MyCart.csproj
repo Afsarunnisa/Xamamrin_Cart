@@ -60,6 +60,9 @@
     <EmbeddedResource Include="Views\LoginPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\PaymentMethodsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -116,6 +119,13 @@
     </Compile>
     <Compile Include="ViewModel\GuestCheckOutViewModel.cs" />
     <Compile Include="Models\GuestUser.cs" />
+    <Compile Include="ViewModel\BaseViewModel.cs" />
+    <Compile Include="ViewModel\NotifyPropertyChanged.cs" />
+    <Compile Include="Models\PaymentMethods.cs" />
+    <Compile Include="Views\PaymentMethodsPage.xaml.cs">
+      <DependentUpon>PaymentMethodsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\PaymentMethodsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">

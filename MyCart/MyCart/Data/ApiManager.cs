@@ -48,5 +48,28 @@ namespace MyCart.Data
             return restService.GetAllStores();
 		}
 
+
+        public Task<Boolean> AddGuestUser(GuestUser user)
+		{
+            return restService.AddGuestUser(user);
+		}
+
+		public Task<Boolean> AddGuestShipping(GuestUser user)
+		{
+			return restService.AddGuestUser(user);
+		}
+
+
+        public Task<List<PaymentMethods>> GetPaymentMethods(){
+            return restService.GetPaymentMethods();
+        }
+
+
+        public Task<Boolean> SetPaymentMethod(PostPaymentMethods payment){
+            return restService.SetPaymentMethods(payment);
+
+        }
+
+
 	}
 }
