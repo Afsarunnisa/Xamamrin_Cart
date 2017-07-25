@@ -22,6 +22,7 @@ namespace MyCart.Data
 
         }
 
+        // Get Oprncart Token
         public async Task GetTokenAsync()
         {
 
@@ -84,6 +85,7 @@ namespace MyCart.Data
 		public async Task<List<Products>> GetAllProducts(string productId, string storeID)
         {
 
+            client.DefaultRequestHeaders.Remove("X-Oc-Store-Id");
 			var url = "";
 
             if(productId == "0"){
@@ -105,6 +107,10 @@ namespace MyCart.Data
                 }
 
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+                //int strIDval = int.Parse(storeID);
+
+                Debug.WriteLine("storeID {0}", storeID);
+
 				client.DefaultRequestHeaders.Add("X-Oc-Store-Id", storeID);
 
 
@@ -188,7 +194,8 @@ namespace MyCart.Data
 		}
 
 
-		public async Task AddToCart(AddCart cart)
+        // Add Product to cart
+        public async Task<Boolean> AddToCart(AddCart cart)
         {
 
 
@@ -215,12 +222,14 @@ namespace MyCart.Data
 
                 var respContent = await response.Content.ReadAsStringAsync();
 
+                return true;
          	}
             catch (Exception ex)
 
             {
                 Debug.WriteLine(@"   ERROR {0}", ex.Message);
-            }
+                return false;
+			}
 
 
         }

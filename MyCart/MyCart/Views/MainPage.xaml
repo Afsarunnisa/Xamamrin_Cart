@@ -20,7 +20,7 @@
                                 <ViewCell>
                                     <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand">
                                         <Image  Source="{Binding icon}" HeightRequest="40" WidthRequest="40"/>
-                                        <Label  Text="{Binding Title}" />
+                                        <Label  Text="{Binding Title}" YAlign="Center" />
                                     
                                     </StackLayout>
                                 </ViewCell>

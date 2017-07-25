@@ -18,7 +18,8 @@ namespace MyCart.Views
 
 		void Checkout_Cart_Clicked(object sender, EventArgs e)
         {
-            
-        }
+            this.Navigation.PushAsync(new GuestCheckOutPage());
+
+		}
 	}
 }

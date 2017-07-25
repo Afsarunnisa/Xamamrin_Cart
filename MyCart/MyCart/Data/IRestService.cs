@@ -20,7 +20,7 @@ namespace MyCart.Data
         Task<List<Category>> GetAllCategories();
 
 
-		Task AddToCart(AddCart cart);
+        Task<Boolean> AddToCart(AddCart cart);
         Task <Cart>GetCart();
 
 

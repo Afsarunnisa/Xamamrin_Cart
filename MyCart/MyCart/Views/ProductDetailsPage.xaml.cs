@@ -24,19 +24,23 @@ namespace MyCart.Views
         }
 
 
-		void Add_Cart_Clicked(object sender, EventArgs e)
+		async void Add_Cart_Clicked(object sender, EventArgs e)
 		{
 
             AddCart cart = new AddCart();
             cart.product_id = currentProduct.id;
             cart.quantity = "1";
 
-            App.RestApiManager.AddToCart(cart);
-            
-        
-        }
 
+            //App.RestApiManager.AddToCart(cart);
 
+            Boolean isProductAdded = await App.RestApiManager.AddToCart(cart);
+
+            if(isProductAdded == true){
+                await this.DisplayAlert("Product", "Product Added", "Ok");
+            }
+
+		}
 
     }
 }

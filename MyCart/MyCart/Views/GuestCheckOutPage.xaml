@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="MyCart.Views.GuestCheckOutPage"
+            Title="Guest Checkout">
+
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="Login" Order="Primary" Text="Login" Priority="0" Clicked="Login_Clicked" />
+    </ContentPage.ToolbarItems>
+    
+	<ContentPage.Content>
+        <ScrollView>
+         <StackLayout Spacing="20" Padding="20">
+               <Label TextColor="#77d065" FontSize = "20" Text="Your Personal Details" />
+
+                <Entry Placeholder="First Name"
+                       Text="{Binding FirstName}"/>
+                <Entry Placeholder="Last Name"
+                       Text="{Binding LastName}"/>
+                <Entry Placeholder="E-Mail"
+                       Text="{Binding EMail}"/>
+                <Entry Placeholder="Telephone"
+                       Text="{Binding Telephone}"/>
+
+                <Label TextColor="#77d065" FontSize = "20" Text="Your Address" />
+
+
+                 <Entry Placeholder="Address"
+                       Text="{Binding Address}"/>
+                <Entry Placeholder="City"
+                       Text="{Binding City}"/>
+                <Entry Placeholder="PostCode"
+                       Text="{Binding PostCode}"/>
+                <Entry Placeholder="Country"
+                       Text="{Binding Country}"/>
+
+                <Entry Placeholder="State"
+                       Text="{Binding State}"/>
+                 
+            <Button Text="Next" TextColor="White"
+                BackgroundColor="#77D065"
+                Command="{Binding LoginCommand}" VerticalOptions="End"/>
+
+
+            </StackLayout>
+        </ScrollView>
+
+	</ContentPage.Content>
+</ContentPage>

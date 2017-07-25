@@ -28,7 +28,20 @@
                                        FontAttributes="Bold" />
 
                                 <Label Text="{Binding price}"  />
+
+
+                                <StackLayout Margin="8" Orientation="Horizontal" >
+
+                                    <Label Text="Quantity :"  />
+
+                                    <Label Text="{Binding quantity}"  />
                                 </StackLayout>
+
+                                </StackLayout>
+
+                                <Button x:Name="wishBtn" Text="Fav" CommandParameter="{Binding name}" Clicked="Wish_Cart_Clicked" HorizontalOptions="End"></Button>
+
+                            
 
                             </StackLayout>
                         </ViewCell>

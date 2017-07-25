@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            x:Class="MyCart.Views.StoresListPage">
+            x:Class="MyCart.Views.StoresListPage"
+            Title="Stores">
 	<ContentPage.Content>
 
                 <ListView ItemsSource="{Binding Stores}"
                       CachingStrategy="RecycleElement"
-                      RowHeight="120" x:Name="StoresListView" ItemSelected="OnStoreSelected">
+                      RowHeight="60" x:Name="StoresListView" ItemSelected="OnStoreSelected">
 
                 <ListView.ItemTemplate>
                     <DataTemplate>

@@ -1,24 +1,34 @@
 ﻿<Properties StartupConfiguration="{6549ED18-2921-4E5C-82F3-8C3585B91CA3}|Default">
   <MonoDevelop.Ide.ItemProperties.MyCart.Droid PreferredExecutionTarget="Android.Android_Accelerated_x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MyCart/Data/RestService.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MyCart/Views/AllProductsListPage.xaml.cs">
     <Files>
-      <File FileName="MyCart/ViewModel/AllProductsListViewModel.cs" Line="38" Column="1" />
-      <File FileName="MyCart/Data/RestService.cs" Line="98" Column="28" />
-      <File FileName="iOS/Main.cs" Line="17" Column="1" />
-      <File FileName="MyCart/Data/IRestService.cs" Line="18" Column="9" />
-      <File FileName="MyCart/ViewModel/StoresListViewModel.cs" Line="64" Column="78" />
-      <File FileName="MyCart/Views/StoresListPage.xaml.cs" Line="33" Column="1" />
-      <File FileName="MyCart/Views/AllProductsListPage.xaml.cs" Line="34" Column="4" />
-      <File FileName="MyCart/ViewModel/CategoriesViewModel.cs" Line="58" Column="9" />
-      <File FileName="MyCart/Views/CategoriesListPage.xaml.cs" Line="25" Column="49" />
-      <File FileName="MyCart/Views/MainPage.xaml.cs" Line="58" Column="1" />
-      <File FileName="MyCart/Views/ProductDetailsPage.xaml.cs" Line="22" Column="1" />
-      <File FileName="MyCart/ViewModel/MyCartViewModel.cs" Line="66" Column="17" />
+      <File FileName="MyCart/ViewModel/AllProductsListViewModel.cs" Line="63" Column="3" />
+      <File FileName="MyCart/Data/RestService.cs" Line="225" Column="28" />
+      <File FileName="MyCart/Views/ProductDetailsPage.xaml" Line="42" Column="1" />
+      <File FileName="MyCart/Views/MainPage.xaml" Line="40" Column="1" />
+      <File FileName="MyCart/Views/StoresListPage.xaml" Line="38" Column="1" />
+      <File FileName="MyCart/Data/IRestService.cs" Line="26" Column="9" />
+      <File FileName="MyCart/Data/ApiManager.cs" Line="37" Column="28" />
+      <File FileName="MyCart/Views/ProductDetailsPage.xaml.cs" Line="44" Column="9" />
+      <File FileName="MyCart/Views/AllProductsListPage.xaml.cs" Line="51" Column="9" />
+      <File FileName="MyCart/Views/DashboardPage.xaml" Line="9" Column="1" />
+      <File FileName="MyCart/Views/MyCartPage.xaml" Line="48" Column="1" />
+      <File FileName="MyCart/Views/GuestCheckOutPage.xaml" Line="46" Column="10" />
+      <File FileName="MyCart/Views/GuestCheckOutPage.xaml.cs" Line="19" Column="6" />
+      <File FileName="MyCart/Views/MyCartPage.xaml.cs" Line="24" Column="3" />
+      <File FileName="MyCart/Views/CategoriesListPage.xaml" Line="38" Column="1" />
+      <File FileName="MyCart/Views/AllProductsListPage.xaml" Line="16" Column="23" />
+      <File FileName="MyCart/Views/LoginPage.xaml" Line="11" Column="1" />
+      <File FileName="MyCart/Views/LoginPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="iOS/Main.cs" Line="21" Column="1" />
+      <File FileName="MyCart/Views/WishListPage.xaml.cs" Line="10" Column="28" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/Views/AllProductsListPage.xaml.cs" relfile="MyCart/Views/AllProductsListPage.xaml.cs" line="48" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />

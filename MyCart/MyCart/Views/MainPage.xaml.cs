@@ -57,7 +57,7 @@ namespace MyCart.Views
 
 
             if(item.Title == "All Products"){
-				Page displayPage = (Page)Activator.CreateInstance(page, "0");
+				Page displayPage = (Page)Activator.CreateInstance(page, "0", "0");
 				Detail = new NavigationPage(displayPage);
             }else{
 				Detail = new NavigationPage((Page)Activator.CreateInstance(page));

@@ -34,7 +34,7 @@ namespace MyCart.Data
 		}
 
 
-        public Task AddToCart(AddCart cart){
+        public Task<Boolean> AddToCart(AddCart cart){
             return restService.AddToCart(cart);
         }
 

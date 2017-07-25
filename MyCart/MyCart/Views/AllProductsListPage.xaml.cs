@@ -17,10 +17,6 @@ namespace MyCart.Views
         public AllProductsListPage(string productID, string storeID)
         {
             InitializeComponent();
-
-            Debug.WriteLine("productID {0}", productID);
-            Debug.WriteLine("StoreID {0}", storeID);
-
 			BindingContext = new AllProductsListViewModel(productID, storeID);
 
         }
@@ -31,10 +27,8 @@ namespace MyCart.Views
 		{
 
             var item = (Products)e.SelectedItem;
-            Debug.WriteLine(@"   item {0}", item.name);
 
 			// Navigation to product details  
-
 			Navigation.PushAsync(new ProductDetailsPage(item));
 
 		}
@@ -45,6 +39,26 @@ namespace MyCart.Views
 		{
             this.Navigation.PushAsync(new MyCartPage());
 		}
+
+		private void Wish_Cart_Clicked(object sender, EventArgs e)
+		{
+
+			//var item = (Products)e.SelectedItem;
+
+			Debug.WriteLine("selected product ");
+
+
+			//var item = (Xamarin.Forms.Button)sender;
+        //    Products listitem = (from itm in Products
+							 //where itm.name == item.CommandParameter.ToString()
+							 //select
+                    //itm).FirstOrDefault<Products>();
+
+
+
+			//allItems.Remove(listitem);
+		}
+
 
 
     }
