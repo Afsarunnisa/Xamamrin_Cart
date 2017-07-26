@@ -17,8 +17,16 @@ namespace MyCart
 		public static string StoreUrl = "http://oc.qa.nbos.in/api/rest/stores";
 
 		public static string AddGuestUserUrl = "http://oc.qa.nbos.in/api/rest/guest";
-	
-        public static string PaymentMethodsUrl = "http://oc.qa.nbos.in/api/rest/paymentmethods";
+		public static string AddGuestShippingUrl = "http://oc.qa.nbos.in/api/rest/guestshipping";
+
+
+
+
+		public static string ShippingMethodsUrl = "http://oc.qa.nbos.in/api/rest/shippingmethods";
+		public static string PaymentMethodsUrl = "http://oc.qa.nbos.in/api/rest/paymentmethods";
+
+		public static string ConfirmUrl = "http://oc.qa.nbos.in/api/rest/confirm";
+
 
 
 

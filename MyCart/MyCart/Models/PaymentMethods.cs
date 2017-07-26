@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Newtonsoft.Json;
 
 
@@ -22,7 +23,7 @@ namespace MyCart.Models
 
 
 		[JsonProperty("payment_methods")]
-		public PaymentMethods payment_methods { get; set; }
+        public Dictionary<string, PaymentMethodsValues> payment_methods { get; set; }
 		
         [JsonProperty("code")]
 		public string code { get; set; }
@@ -37,28 +38,22 @@ namespace MyCart.Models
 
 	}
 
-    public class PaymentMethods
+    public class PaymentMethodsValues
     {
 
-		[JsonProperty("payment_name")]
-		public string payment_name { get; set; }
-		
-        [JsonProperty("payment_method")]
-		public string payment_method { get; set; }
-
-
-		public PaymentMethods()
-        {
-        }
-    }
-
-	public class PaymentMethodsValues
-	{
+		[JsonProperty("code")]
 		public string code { get; set; }
+		
+        [JsonProperty("title")]
 		public string title { get; set; }
+
+		[JsonProperty("terms")]
 		public string terms { get; set; }
+
+		[JsonProperty("sort_order")]
 		public string sort_order { get; set; }
-	}
+
+    }
 
 
     public class PostPaymentMethods{

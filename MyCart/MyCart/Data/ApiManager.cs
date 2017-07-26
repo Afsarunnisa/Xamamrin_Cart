@@ -51,16 +51,29 @@ namespace MyCart.Data
 
         public Task<Boolean> AddGuestUser(GuestUser user)
 		{
-            return restService.AddGuestUser(user);
+            return restService.AddGuestUser(user, Constants.AddGuestUserUrl);
 		}
 
 		public Task<Boolean> AddGuestShipping(GuestUser user)
 		{
-			return restService.AddGuestUser(user);
+            return restService.AddGuestUser(user, Constants.AddGuestShippingUrl);
 		}
 
 
-        public Task<List<PaymentMethods>> GetPaymentMethods(){
+
+		public Task<Dictionary<string, ShippingQuoteValues>> GetShippingMethods()
+		{
+            return restService.GetShippingMethods();
+		}
+
+
+        public Task<Boolean> SetShippingMethod(PostShippingMethods shippng)
+		{
+            return restService.SetShippingMethods(shippng);
+		}
+
+
+		public Task<Dictionary<string, PaymentMethodsValues>> GetPaymentMethods(){
             return restService.GetPaymentMethods();
         }
 
@@ -69,6 +82,12 @@ namespace MyCart.Data
             return restService.SetPaymentMethods(payment);
 
         }
+
+		public Task<Order> ConfirmCart()
+		{
+            return restService.ConfirmCart();
+
+		}
 
 
 	}

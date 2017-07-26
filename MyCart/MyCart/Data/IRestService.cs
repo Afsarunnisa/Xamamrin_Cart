@@ -23,13 +23,21 @@ namespace MyCart.Data
         Task<Boolean> AddToCart(AddCart cart);
         Task <Cart>GetCart();
 
-        Task<Boolean> AddGuestUser(GuestUser user);
+        Task<Boolean> AddGuestUser(GuestUser user, string url);
 
 
-        Task <List<PaymentMethods>> GetPaymentMethods();
-        Task<Boolean> SetPaymentMethods(PostPaymentMethods payment);
+        Task<Dictionary<string, ShippingQuoteValues>> GetShippingMethods();
+        Task<Boolean> SetShippingMethods(PostShippingMethods shipping);
 
 
+        Task<Dictionary<string, PaymentMethodsValues>> GetPaymentMethods();
+		Task<Boolean> SetPaymentMethods(PostPaymentMethods payment);
+
+
+        Task<Order> ConfirmCart();
+        Task<Boolean> ConfirmPutCart();
+
+		//Task<Order> ConfirmCart();
 
 	}
 }

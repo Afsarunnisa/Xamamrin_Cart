@@ -12,7 +12,7 @@
 
 
         <Button x:Name="CheckOut" Text="Checkout" TextColor="White"
-            BackgroundColor="#77D065" VerticalOptions="End"/>
+            BackgroundColor="#77D065" VerticalOptions="End" Command="{Binding CheckOutBtnCommand}"/>
 
        <!-- <Button x:Name="CheckOut" Text="Checkout" TextColor="White"
                 BackgroundColor="#77D065"

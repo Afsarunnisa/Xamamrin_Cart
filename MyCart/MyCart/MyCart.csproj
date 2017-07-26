@@ -126,6 +126,8 @@
       <DependentUpon>PaymentMethodsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\PaymentMethodsViewModel.cs" />
+    <Compile Include="Models\ShippingMethods.cs" />
+    <Compile Include="Models\Order.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">

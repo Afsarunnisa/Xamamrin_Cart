@@ -69,27 +69,26 @@ namespace MyCart.ViewModel
             }
 
             if(shippingValue == true){
-                Debug.WriteLine("get payment methods");
 
-				//this.Navigation.PushAsync(new MyCartPage());
+                await App.RestApiManager.GetShippingMethods();
 
-				Debug.WriteLine("_navigation");
-				Debug.WriteLine(_navigation);
+                PostShippingMethods shippingMethod = new PostShippingMethods()
+				{
+				    comment = "simple comment",
+				    shipping_method = "flat.flat"
+				};
 
-                await _navigation.PushAsync(new PaymentMethodsPage());
+                Boolean shippingMethodSuc = await App.RestApiManager.SetShippingMethod(shippingMethod);
 
 
-				//await App.RestApiManager.GetPaymentMethods();
+                Debug.WriteLine("shippingMethodSuc {0}", shippingMethodSuc);
 
-				//PostPaymentMethods paymentMethod = new PostPaymentMethods()
-				//{
-				//    comment = "simple comment",
-				//    payment_method = "cod",
-				//    agree = "1"
+                if(shippingMethodSuc == true){
+					await _navigation.PushAsync(new PaymentMethodsPage());
 
-				//};
+				}
+    
 
-				//var paymentMethodSuc = await App.RestApiManager.SetPaymentMethod(paymentMethod);
 			}
 
 

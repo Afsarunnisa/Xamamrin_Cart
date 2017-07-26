@@ -81,6 +81,5 @@ namespace MyCart.ViewModel
 		void OnPropertyChanged([CallerMemberName]string propertyName = "") =>
 			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 
-
 	}
 }

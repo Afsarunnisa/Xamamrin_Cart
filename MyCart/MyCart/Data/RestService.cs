@@ -237,9 +237,9 @@ namespace MyCart.Data
 
 		// Add guest user 
 
-        public async Task<Boolean> AddGuestUser(GuestUser user){
+        public async Task<Boolean> AddGuestUser(GuestUser user, string url){
 
-			var url = string.Format(Constants.AddGuestUserUrl);
+			// var url = string.Format(Constants.AddGuestUserUrl);
 			var uri = new Uri(url);
 
             try{
@@ -274,7 +274,7 @@ namespace MyCart.Data
 
 
 
-        public async Task<List<PaymentMethods>> GetPaymentMethods()
+        public async Task<Dictionary<string, PaymentMethodsValues>> GetPaymentMethods()
         {
 			var url = string.Format(Constants.PaymentMethodsUrl);
 			var uri = new Uri(url);
@@ -293,8 +293,17 @@ namespace MyCart.Data
 				var response = await client.GetAsync(uri);
 				var respContent = await response.Content.ReadAsStringAsync();
 
-				Debug.WriteLine(@"   respContent {0}", respContent);
 
+				Debug.WriteLine(@"   PaymentMethodsResp {0}", respContent);
+
+				PaymentMethodsResp resp = JsonConvert.DeserializeObject<PaymentMethodsResp>(respContent);
+
+
+                Debug.WriteLine(@"   PaymentMethodsResp {0}", resp.data.payment_methods);
+
+                Debug.WriteLine(@"   PaymentMethodsResp {0}", resp.data.payment_methods["cod"].code);
+
+                return resp.data.payment_methods;
 
 			}
 			catch (Exception ex)
@@ -325,6 +334,7 @@ namespace MyCart.Data
 
 				Debug.WriteLine(@"   respContent {0}", respContent);
 
+                return true;
 			}
 			catch (Exception ex)
 			{
@@ -335,6 +345,129 @@ namespace MyCart.Data
 
 		}
 
+
+		public async Task<Dictionary<string, ShippingQuoteValues>> GetShippingMethods(){
+
+			var url = string.Format(Constants.ShippingMethodsUrl);
+			var uri = new Uri(url);
+
+            try
+            {
+				string token = "";
+				if (App.Current.Properties.ContainsKey("AccessToken"))
+				{
+					token = App.Current.Properties["AccessToken"] as string;
+				}
+
+				Debug.WriteLine(@"   token {0}", token);
+
+				client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+				var response = await client.GetAsync(uri);
+				var respContent = await response.Content.ReadAsStringAsync();
+
+				Debug.WriteLine(@"   respContent {0}", respContent);
+
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(@"   ERROR {0}", ex.Message);
+			}
+
+            return null;
+        }
+
+
+        public async Task<Boolean> SetShippingMethods(PostShippingMethods payment)
+        {
+            var url = string.Format(Constants.ShippingMethodsUrl);
+			var uri = new Uri(url);
+
+            try{
+
+				string token = "";
+				if (App.Current.Properties.ContainsKey("AccessToken"))
+				{
+					token = App.Current.Properties["AccessToken"] as string;
+				}
+
+				var json = JsonConvert.SerializeObject(payment);
+				var content = new StringContent(json, Encoding.UTF8, "application/json");
+				var response = await client.PostAsync(uri, content);
+				var respContent = await response.Content.ReadAsStringAsync();
+
+				Debug.WriteLine(@"   respContent {0}", respContent);
+
+				return true;
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(@"   ERROR {0}", ex.Message);
+			}
+
+			return false;
+
+
+
+		}
+
+        public async Task<Order> ConfirmCart(){
+
+			var url = string.Format(Constants.ConfirmUrl);
+			var uri = new Uri(url);
+
+            try{
+
+				string token = "";
+				if (App.Current.Properties.ContainsKey("AccessToken"))
+				{
+					token = App.Current.Properties["AccessToken"] as string;
+				}
+
+				//var json = JsonConvert.SerializeObject(payment);
+                //var content = new StringContent(null, Encoding.UTF8, "application/json");
+                var response = await client.PostAsync(uri, null);
+				var respContent = await response.Content.ReadAsStringAsync();
+
+				Debug.WriteLine(@"   respContent {0}", respContent);
+
+                await this.ConfirmPutCart();
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(@"   ERROR {0}", ex.Message);
+			}
+
+            return null;
+        }
+
+
+        public async Task<Boolean> ConfirmPutCart()
+        {
+			var url = string.Format(Constants.ConfirmUrl);
+			var uri = new Uri(url);
+
+            try{
+
+				string token = "";
+				if (App.Current.Properties.ContainsKey("AccessToken"))
+				{
+					token = App.Current.Properties["AccessToken"] as string;
+				}
+
+                var response = await client.PutAsync(uri, null);
+				var respContent = await response.Content.ReadAsStringAsync();
+
+				Debug.WriteLine(@"   respContent {0}", respContent);
+
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(@"   ERROR {0}", ex.Message);
+			}
+
+            return false;
+
+		}
 
 
 
