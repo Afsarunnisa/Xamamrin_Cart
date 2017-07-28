@@ -15,20 +15,70 @@
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
+                                <StackLayout>
+
                                 <StackLayout Margin="8" Orientation="Horizontal" >
 
-                                    <Image Source="{Binding thumb}" />
-
+                                    <Image Source="{Binding thumb}" HorizontalOptions="Start" WidthRequest="60" HeightRequest="60"/>
 
                                     <StackLayout Margin="8"  >
 
-                                    <Label Text="{Binding name}"
-                                           FontAttributes="Bold" />
+                                        <Label Text="{Binding name}"
+                                               FontAttributes="Bold" />
 
-                                    <Label Text="{Binding price}"  />
+                                        <StackLayout Orientation="Horizontal"  >
+
+                                                <Label Text="Rs"  />
+                                                <Label Text="{Binding price}"  />
+                                        </StackLayout>
+
                                     </StackLayout>
 
+
                                 </StackLayout>
+
+<!--                                <Button Text="Remove" BorderRadius="0" TextColor="Black" HeightRequest = "30"/>
+--><!--                                                                <Button Text="Remove" BorderRadius="0" TextColor="Black" HeightRequest = "30" Clicked="Remove_Cart_Clicked"/>
+-->
+
+
+                                   <!-- <StackLayout Orientation="Vertical"
+                                                 Spacing="0">
+
+                                        <BoxView HeightRequest="0.5"
+                                                 HorizontalOptions="FillAndExpand"
+                                                 VerticalOptions="EndAndExpand"
+                                                 Color="#D3D3D3" />
+
+                                        <StackLayout Orientation="Horizontal">
+
+                                            <Button Text="Remove" TextColor="Black"
+                                                    HeightRequest="30"
+                                                    BorderColor="Transparent"
+                                                    BorderWidth="0"
+                                                    BorderRadius="0"
+                                                    HorizontalOptions="CenterAndExpand"
+                                                    VerticalOptions="CenterAndExpand"/>
+
+                                              <BoxView WidthRequest="0.5"
+                                                     HorizontalOptions="CenterAndExpand"
+                                                     VerticalOptions="FillAndExpand"
+                                                     Color="#D3D3D3" />
+                                        
+                                            <Button Text="Add to wishlist" TextColor="Black"
+                                                        HeightRequest="30"
+                                                        BorderColor="Transparent"
+                                                        BorderWidth="0"
+                                                        BorderRadius="0"
+                                                        HorizontalOptions="CenterAndExpand"
+                                                        VerticalOptions="CenterAndExpand"/>
+                                        
+                                        </StackLayout>
+
+                                    </StackLayout>-->
+                            
+                                </StackLayout>
+
                             </ViewCell>
 
 
@@ -37,7 +87,7 @@
 
         </ListView>
 
-        <Button Text="Checkout"  TextColor="Black" HeightRequest = "50" BackgroundColor = "Gray" VerticalOptions="End" Clicked="Checkout_Cart_Clicked"/>
+        <Button Text="Proceed To Checkout" BorderRadius="0" TextColor="White" HeightRequest = "50" BackgroundColor = "#77d065" VerticalOptions="EndAndExpand" Clicked="Checkout_Cart_Clicked"/>
 
     </StackLayout>
 

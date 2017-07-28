@@ -111,9 +111,54 @@
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Favorite.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Favorite.imageset\fav.png" />
+    <ImageAsset Include="Assets.xcassets\Favorite.imageset\fav%402x.png" />
+    <ImageAsset Include="Assets.xcassets\Favorite.imageset\fav%403x.png" />
+    <ImageAsset Include="Assets.xcassets\Cart.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Cart.imageset\cart.png" />
+    <ImageAsset Include="Assets.xcassets\Cart.imageset\cart%402x.png" />
+    <ImageAsset Include="Assets.xcassets\Cart.imageset\cart%403x.png" />
+    <ImageAsset Include="Assets.xcassets\Home.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\WishList.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Products.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Categories.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Categories.imageset\Categories.png" />
+    <ImageAsset Include="Assets.xcassets\Categories.imageset\Categories%402x.png" />
+    <ImageAsset Include="Assets.xcassets\Categories.imageset\Categories%403x.png" />
+    <ImageAsset Include="Assets.xcassets\Products.imageset\Product.png" />
+    <ImageAsset Include="Assets.xcassets\Products.imageset\Product%402x.png" />
+    <ImageAsset Include="Assets.xcassets\Products.imageset\Product%403x.png" />
+    <ImageAsset Include="Assets.xcassets\WishList.imageset\wishlist.png" />
+    <ImageAsset Include="Assets.xcassets\WishList.imageset\wishlist%402x.png" />
+    <ImageAsset Include="Assets.xcassets\WishList.imageset\wishlist%403x.png" />
+    <ImageAsset Include="Assets.xcassets\Home.imageset\home.png" />
+    <ImageAsset Include="Assets.xcassets\Home.imageset\home%402x.png" />
+    <ImageAsset Include="Assets.xcassets\Home.imageset\home%403x.png" />
+    <ImageAsset Include="Assets.xcassets\Contact.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Contact.imageset\Contact.png" />
+    <ImageAsset Include="Assets.xcassets\Contact.imageset\Contact%402x.png" />
+    <ImageAsset Include="Assets.xcassets\Contact.imageset\Contact%403x.png" />
+    <ImageAsset Include="Assets.xcassets\Login.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Login.imageset\login.png" />
+    <ImageAsset Include="Assets.xcassets\Login.imageset\login%402x.png" />
+    <ImageAsset Include="Assets.xcassets\Login.imageset\login%403x.png" />
+    <ImageAsset Include="Assets.xcassets\Store.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Store.imageset\store.png" />
+    <ImageAsset Include="Assets.xcassets\Store.imageset\store%402x.png" />
+    <ImageAsset Include="Assets.xcassets\Store.imageset\store%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Assets.xcassets\Favorite.imageset\" />
+    <Folder Include="Assets.xcassets\Cart.imageset\" />
+    <Folder Include="Assets.xcassets\Home.imageset\" />
+    <Folder Include="Assets.xcassets\WishList.imageset\" />
+    <Folder Include="Assets.xcassets\Products.imageset\" />
+    <Folder Include="Assets.xcassets\Categories.imageset\" />
+    <Folder Include="Assets.xcassets\Contact.imageset\" />
+    <Folder Include="Assets.xcassets\Login.imageset\" />
+    <Folder Include="Assets.xcassets\Store.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -126,6 +171,7 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="HtmlLabelRenderer.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.4.231\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.4.231\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />

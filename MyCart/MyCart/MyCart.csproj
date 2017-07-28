@@ -63,6 +63,9 @@
     <EmbeddedResource Include="Views\PaymentMethodsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\SignUpPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -128,6 +131,69 @@
     <Compile Include="ViewModel\PaymentMethodsViewModel.cs" />
     <Compile Include="Models\ShippingMethods.cs" />
     <Compile Include="Models\Order.cs" />
+    <Compile Include="..\..\..\..\..\Library\API\AbstractApiContext.cs">
+      <Link>Library\API\AbstractApiContext.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\Library\API\ApiContext.cs">
+      <Link>Library\API\ApiContext.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\Library\API\IdnSDK.cs">
+      <Link>Library\API\IdnSDK.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\Library\API\IdsXamarinApiContext.cs">
+      <Link>Library\API\IdsXamarinApiContext.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\Library\API\InMemoryApiContext.cs">
+      <Link>Library\API\InMemoryApiContext.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\Library\API\NetworkApi.cs">
+      <Link>Library\API\NetworkApi.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\Library\API\Models\LoginModel.cs">
+      <Link>Library\API\Models\LoginModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\Library\API\Models\MemberApiModel.cs">
+      <Link>Library\API\Models\MemberApiModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\Library\API\Models\MessagesApiModel.cs">
+      <Link>Library\API\Models\MessagesApiModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\Library\API\Models\NewMemberApiModel.cs">
+      <Link>Library\API\Models\NewMemberApiModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\Library\API\Models\SignUpModel.cs">
+      <Link>Library\API\Models\SignUpModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\Library\API\Models\TokenApiModel.cs">
+      <Link>Library\API\Models\TokenApiModel.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\Library\Modules\IDS\IDS.cs">
+      <Link>Library\Modules\IDS\IDS.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\Library\Modules\Identity\IdentityApi.cs">
+      <Link>Library\Modules\Identity\IdentityApi.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\Library\Modules\Identity\IdentityIdsRegistry.cs">
+      <Link>Library\Modules\Identity\IdentityIdsRegistry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\Library\Modules\Identity\IdentityRemoteApi.cs">
+      <Link>Library\Modules\Identity\IdentityRemoteApi.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\Library\Modules\Token\TokenApi.cs">
+      <Link>Library\Modules\Token\TokenApi.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\Library\Modules\Token\TokenIdsRegistry.cs">
+      <Link>Library\Modules\Token\TokenIdsRegistry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\Library\Modules\Token\TokenRemoteApi.cs">
+      <Link>Library\Modules\Token\TokenRemoteApi.cs</Link>
+    </Compile>
+    <Compile Include="ViewModel\LoginViewModel.cs" />
+    <Compile Include="Views\SignUpPage.xaml.cs">
+      <DependentUpon>SignUpPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\SignUpViewModel.cs" />
+    <Compile Include="Controls\HtmlLabel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
@@ -145,12 +211,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="..\..\..\..\..\Library\API\.DS_Store">
+      <Link>Library\API\.DS_Store</Link>
+    </None>
+    <None Include="..\..\..\..\..\Library\Modules\.DS_Store">
+      <Link>Library\Modules\.DS_Store</Link>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
     <Folder Include="Models\" />
     <Folder Include="ViewModel\" />
     <Folder Include="Data\" />
+    <Folder Include="Controls\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.4.231\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.4.231\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />

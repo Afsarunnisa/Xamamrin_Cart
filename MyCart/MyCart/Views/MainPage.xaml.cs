@@ -20,22 +20,22 @@ namespace MyCart.Views
 		public MainPage()
         {
             InitializeComponent();
-
+       
 			menuList = new List<MenuItemModel>();
 
-			var page1 = new MenuItemModel() { Title = "Home", Icon = "", TargetType = typeof(DashboardPage) };
-            var page2 = new MenuItemModel() { Title = "Stores", Icon = "", TargetType = typeof(StoresListPage) };
-			var page3 = new MenuItemModel() { Title = "All Products", Icon = "", TargetType = typeof(AllProductsListPage) };
-			var page4 = new MenuItemModel() { Title = "Featured Products", Icon = "", TargetType = typeof(DashboardPage) };
-			var page5 = new MenuItemModel() { Title = "Categories", Icon = "", TargetType = typeof(CategoriesListPage) };
-			var page6 = new MenuItemModel() { Title = "WishList", Icon = "", TargetType = typeof(WishListPage) };
-			var page7 = new MenuItemModel() { Title = "Contact us", Icon = "", TargetType = typeof(DashboardPage) };
-			var page8 = new MenuItemModel() { Title = "Login", Icon = "", TargetType = typeof(DashboardPage) };
+			var page1 = new MenuItemModel() { Title = "Home", Icon = "Home", TargetType = typeof(DashboardPage) };
+            var page2 = new MenuItemModel() { Title = "Stores", Icon = "Store", TargetType = typeof(StoresListPage) };
+			var page3 = new MenuItemModel() { Title = "All Products", Icon = "Products", TargetType = typeof(AllProductsListPage) };
+			//var page4 = new MenuItemModel() { Title = "Featured Products", Icon = "", TargetType = typeof(DashboardPage) };
+			var page5 = new MenuItemModel() { Title = "Categories", Icon = "Categories", TargetType = typeof(CategoriesListPage) };
+			var page6 = new MenuItemModel() { Title = "WishList", Icon = "WishList", TargetType = typeof(WishListPage) };
+			var page7 = new MenuItemModel() { Title = "Contact us", Icon = "Contact", TargetType = typeof(DashboardPage) };
+            var page8 = new MenuItemModel() { Title = "Login", Icon = "Login", TargetType = typeof(LoginPage) };
 
 			menuList.Add(page1);
 			menuList.Add(page2);
 			menuList.Add(page3);
-			menuList.Add(page4);
+			//menuList.Add(page4);
 			menuList.Add(page5);
 			menuList.Add(page6);
 			menuList.Add(page7);

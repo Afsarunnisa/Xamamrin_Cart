@@ -57,39 +57,70 @@ namespace MyCart.ViewModel
 		#region Methods  
 		private async Task ExecuteOnNextClick()
 		{
-            var guestUser = GuestUserObject;
+
+            var isLoginValue = App.Current.Properties["UserLogin"];
+
+            Debug.WriteLine("isLoginValue {0}", isLoginValue);
+
+
+			var guestUser = GuestUserObject;
             guestUser.country_id = "99";
             guestUser.zone_id = "4231";
 
-            Boolean value = await App.RestApiManager.AddGuestUser(guestUser);
+            Boolean addGuestvalue = await App.RestApiManager.AddGuestUser(guestUser);
             Boolean shippingValue = false;
 
-            if(value == true){
+            if(addGuestvalue == true){
                shippingValue = await App.RestApiManager.AddGuestShipping(guestUser);
             }
 
             if(shippingValue == true){
-
-                await App.RestApiManager.GetShippingMethods();
-
-                PostShippingMethods shippingMethod = new PostShippingMethods()
-				{
-				    comment = "simple comment",
-				    shipping_method = "flat.flat"
-				};
-
-                Boolean shippingMethodSuc = await App.RestApiManager.SetShippingMethod(shippingMethod);
+				await _navigation.PushAsync(new PaymentMethodsPage());
+            }
 
 
-                Debug.WriteLine("shippingMethodSuc {0}", shippingMethodSuc);
+   //         if(shippingValue == true){
 
-                if(shippingMethodSuc == true){
-					await _navigation.PushAsync(new PaymentMethodsPage());
+   //             Dictionary<string, ShippingMethodsValues> shippingMethiods = await App.RestApiManager.GetShippingMethods();
 
-				}
+			//	var arrayOfAllKeys = shippingMethiods.Keys.ToArray();
+
+   //             foreach (var shipping in arrayOfAllKeys){
+
+			//		Debug.WriteLine("shippingMethiodsNAME {0}", shipping);
+
+			//		Debug.WriteLine("shippingMethiods.Keys {0}", shippingMethiods[shipping]);
+
+   //                 ShippingMethodsValues val = shippingMethiods[shipping];
+
+
+   //                 Debug.WriteLine("val {0}", val.title);
+
+
+			//	}
+
+
+
+
+
+			//	PostShippingMethods shippingMethod = new PostShippingMethods()
+			//	{
+			//	    comment = "simple comment",
+			//	    shipping_method = "flat.flat"
+			//	};
+
+   //             Boolean shippingMethodSuc = await App.RestApiManager.SetShippingMethod(shippingMethod);
+
+
+   //             Debug.WriteLine("shippingMethodSuc {0}", shippingMethodSuc);
+
+   //             if(shippingMethodSuc == true){
+			//		await _navigation.PushAsync(new PaymentMethodsPage());
+
+			//	}
     
 
-			}
+			//}
 
 
 

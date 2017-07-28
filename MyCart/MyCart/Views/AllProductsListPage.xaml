@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            x:Class="MyCart.Views.AllProductsListPage">
+            x:Class="MyCart.Views.AllProductsListPage"
+            Title="Products">
 
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Name="Cart" Order="Primary" Text="Cart" Priority="0" Clicked="Cart_Clicked" />
+        <ToolbarItem Name="Cart" Icon="Cart" Order="Primary" Priority="0" Clicked="Cart_Clicked" />
     </ContentPage.ToolbarItems>
     
 	<ContentPage.Content>
@@ -19,33 +20,48 @@
                         <ViewCell>
                             <StackLayout Margin="8" Orientation="Horizontal" >
 
-                                <Image Source="{Binding image}" />
 
-
-                                <StackLayout Margin="8"  >
-
-                                <Label Text="{Binding name}"
-                                       FontAttributes="Bold" />
-
-                                <Label Text="{Binding price}"  />
-
-
-                                <StackLayout Margin="8" Orientation="Horizontal" >
-
-                                    <Label Text="Quantity :"  />
-
-                                    <Label Text="{Binding quantity}"  />
+                                <StackLayout>
+                                    <Image Source="{Binding image}" HeightRequest="60" WidthRequest="60"
+                                        VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
                                 </StackLayout>
 
-                                </StackLayout>
+                                <StackLayout Margin="8" HorizontalOptions="FillAndExpand" >
 
-                                <Button x:Name="wishBtn" Text="Fav" CommandParameter="{Binding name}" Clicked="Wish_Cart_Clicked" HorizontalOptions="End"></Button>
+                                    <Label Text="{Binding name}"
+                                                   FontAttributes="Bold" LineBreakMode="TailTruncation"/>
 
-                            
+                                    <StackLayout Orientation="Horizontal" >
 
-                            </StackLayout>
+                                       <StackLayout >
+
+                                            <StackLayout Orientation="Horizontal" >
+                                                            
+                                                <Label Text="₹"  />
+                                                <Label Text="{Binding price}"  />
+                                                                                                
+                                            </StackLayout>
+                                            
+                                            <StackLayout Orientation="Horizontal" >
+                                                            
+                                                <Label Text="InStock:"  />
+                                                <Label Text="{Binding quantity}"  />
+                                                                                                
+                                            </StackLayout>
+                                        </StackLayout>  
+
+
+                                        <Button x:Name="wishBtn" Text="Fav" CommandParameter="{Binding name}"
+                                                Clicked="Wish_Cart_Clicked" HorizontalOptions="EndAndExpand" 
+                                                WidthRequest="50" HeightRequest="50" Image="Favorite" />
+
+                                  </StackLayout>  
+
+                             </StackLayout>
+
+                        </StackLayout>
+                        
                         </ViewCell>
-
 
                     </DataTemplate>
                 </ListView.ItemTemplate>

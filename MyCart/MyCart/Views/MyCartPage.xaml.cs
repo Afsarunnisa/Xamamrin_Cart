@@ -18,7 +18,18 @@ namespace MyCart.Views
 
 		void Checkout_Cart_Clicked(object sender, EventArgs e)
         {
-            this.Navigation.PushAsync(new GuestCheckOutPage());
+
+         
+            var isUserLogin = App.Current.Properties["UserLogin"];
+
+            if(isUserLogin == "true"){
+                this.Navigation.PushAsync(new PaymentMethodsPage());
+
+			}else{
+				this.Navigation.PushAsync(new GuestCheckOutPage());
+
+			}
+
 
 		}
 	}

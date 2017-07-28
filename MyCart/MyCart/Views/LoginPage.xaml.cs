@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 using Xamarin.Forms;
 
+using MyCart.ViewModel;
+
 namespace MyCart.Views
 {
     public partial class LoginPage : ContentPage
@@ -10,6 +12,8 @@ namespace MyCart.Views
         public LoginPage()
         {
             InitializeComponent();
-        }
+			BindingContext = new LoginViewModel(this.Navigation);
+
+		}
     }
 }

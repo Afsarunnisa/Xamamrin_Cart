@@ -28,6 +28,10 @@ namespace MyCart
 		public static string ConfirmUrl = "http://oc.qa.nbos.in/api/rest/confirm";
 
 
+		public static string OcConnectUrl = "http://oc.qa.nbos.in/index.php?route=rest/nbos/connect";
+
+        public static string PostPaymentAddress = "http://oc.qa.nbos.in/api/rest/paymentaddress";
+		
 
 
 		public Constants()

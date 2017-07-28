@@ -61,7 +61,7 @@ namespace MyCart.Data
 
 
 
-		public Task<Dictionary<string, ShippingQuoteValues>> GetShippingMethods()
+		public Task<Dictionary<string, ShippingMethodsValues>> GetShippingMethods()
 		{
             return restService.GetShippingMethods();
 		}
@@ -89,6 +89,14 @@ namespace MyCart.Data
 
 		}
 
+        public Task<Boolean> OcConnect(){
+            return restService.NbosOcConnect();
+        }
+
+         
+        public Task<Boolean> PostPaymentAddress(Dictionary<string, string> address){
+            return restService.PostPaymentAddress(address);
+        }
 
 	}
 }

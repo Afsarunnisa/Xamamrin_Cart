@@ -4,6 +4,10 @@ using MyCart.Models;
 using MyCart.Views;
 using MyCart.Data;
 
+using MyCart.Library.API;
+using MyCart.Library.Modules.Token;
+using MyCart.Library.Modules.Identity;
+
 
 
 namespace MyCart
@@ -17,6 +21,15 @@ namespace MyCart
 		public App()
         {
             InitializeComponent();
+
+			IdsXamarinApiContext app_context = new IdsXamarinApiContext();
+			_ = new IdnSDK(app_context);
+
+			_ = new TokenIdsRegistry();
+			_ = new IdentityIdsRegistry();
+            App.Current.Properties["UserLogin"] = "false";
+
+
 			RestApiManager = new ApiManager(new RestService());
 
 

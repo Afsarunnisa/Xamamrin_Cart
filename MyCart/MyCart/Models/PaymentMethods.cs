@@ -21,7 +21,6 @@ namespace MyCart.Models
 		[JsonProperty("error_warning")]
 		public string error_warning { get; set; }
 
-
 		[JsonProperty("payment_methods")]
         public Dictionary<string, PaymentMethodsValues> payment_methods { get; set; }
 		
@@ -33,8 +32,6 @@ namespace MyCart.Models
 
 		[JsonProperty("agree")]
 		public string agree { get; set; }
-
-
 
 	}
 

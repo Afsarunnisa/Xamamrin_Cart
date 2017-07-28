@@ -25,4 +25,6 @@
 /Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/obj/Release/MyCart.Views.StoresListPage.xaml.g.cs
 /Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/obj/Release/MyCart.Views.GuestCheckOutPage.xaml.g.cs
 /Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/obj/Release/MyCart.Views.LoginPage.xaml.g.cs
+/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/obj/Release/MyCart.Views.PaymentMethodsPage.xaml.g.cs
+/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/obj/Release/MyCart.Views.SignUpPage.xaml.g.cs
 /Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/obj/Release/MyCart.dll

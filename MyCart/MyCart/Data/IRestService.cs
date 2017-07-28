@@ -13,8 +13,6 @@ namespace MyCart.Data
         Task GetTokenAsync();
 
 		Task<List<Store>> GetAllStores();
-		//Task<Store> GetStore();
-
 
 		Task <List<Products>> GetAllProducts(string productId, string storeID);
         Task<List<Category>> GetAllCategories();
@@ -26,7 +24,7 @@ namespace MyCart.Data
         Task<Boolean> AddGuestUser(GuestUser user, string url);
 
 
-        Task<Dictionary<string, ShippingQuoteValues>> GetShippingMethods();
+        Task<Dictionary<string, ShippingMethodsValues>> GetShippingMethods();
         Task<Boolean> SetShippingMethods(PostShippingMethods shipping);
 
 
@@ -36,6 +34,11 @@ namespace MyCart.Data
 
         Task<Order> ConfirmCart();
         Task<Boolean> ConfirmPutCart();
+
+		Task<Boolean> NbosOcConnect();
+
+        Task<Boolean> PostPaymentAddress(Dictionary<string, string> postAddress);
+
 
 		//Task<Order> ConfirmCart();
 

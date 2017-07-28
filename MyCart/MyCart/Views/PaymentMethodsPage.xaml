@@ -7,8 +7,37 @@
 
     <StackLayout Spacing="20" Padding="20" >
 
-        <Label Text = "Cash on delivery" />
 
+            <Label Text="Shipping Methods" Font="22" TextColor="Green"/>
+
+            <ListView ItemsSource="{Binding ShippingValues}" RowHeight="40" x:Name="ShippingMethodsListView" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Margin="8" Orientation="Horizontal">
+                                <Label Text ="{Binding title}" FontAttributes="Bold"/>
+                                <Label Text ="{Binding cost}" />
+
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Label Text="Payment Methods" Font="22" TextColor="Green"/>
+
+            <ListView ItemsSource="{Binding PaymentValues}" RowHeight="60" x:Name="PaymentMethodsListView" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Margin="8" Orientation="Horizontal">
+                                <Label Text ="{Binding title}" FontAttributes="Bold"/>
+
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
 
 
         <Button x:Name="CheckOut" Text="Checkout" TextColor="White"

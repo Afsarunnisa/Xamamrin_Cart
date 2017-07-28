@@ -46,10 +46,56 @@ namespace MyCart.Data
             }
         }
 
+        public async Task<Boolean> NbosOcConnect(){
+
+			var url = string.Format(Constants.OcConnectUrl);
+			var uri = new Uri(url);
+
+            try{
+
+				string nbosToken = "";
+
+				if (App.Current.Properties.ContainsKey("NbosToken"))
+				{
+					nbosToken = App.Current.Properties["NbosToken"] as string;
+				}
+
+				string token = "";
+
+				if (App.Current.Properties.ContainsKey("AccessToken"))
+				{
+					token = App.Current.Properties["AccessToken"] as string;
+				}
+
+				client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+                Dictionary<string, string> tokenDict = new Dictionary<string, string>();
+                tokenDict.Add("nbos_token", nbosToken);
+
+
+                var content = new StringContent(JsonConvert.SerializeObject(tokenDict), Encoding.UTF8, "application/json");
+
+				var response = await client.PostAsync(uri, content);
+
+				var respContent = await response.Content.ReadAsStringAsync();
+
+				Debug.WriteLine(@" OC connect  respContent {0}",respContent);
+
+                return true;
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(@"   ERROR {0}", ex.Message);
+			}
+
+			return true;
+
+		}
 
 
 
-        public async Task<List<Store>> GetAllStores(){
+
+		public async Task<List<Store>> GetAllStores(){
             
 
 			var url = string.Format(Constants.StoreUrl);
@@ -315,7 +361,41 @@ namespace MyCart.Data
 
 		}
 
-        public async Task<Boolean> SetPaymentMethods(PostPaymentMethods payment){
+        public async Task<Boolean> PostPaymentAddress(Dictionary<string, string> address){
+
+			var url = string.Format(Constants.PostPaymentAddress);
+			var uri = new Uri(url);
+
+            try{
+
+				string token = "";
+				if (App.Current.Properties.ContainsKey("AccessToken"))
+				{
+					token = App.Current.Properties["AccessToken"] as string;
+				}
+
+                var content = new StringContent(JsonConvert.SerializeObject(address), Encoding.UTF8, "application/json");
+				var response = await client.PostAsync(uri, content);
+				var respContent = await response.Content.ReadAsStringAsync();
+
+                Debug.WriteLine(@" OC connect  respContent {0}", respContent);
+
+                return true;
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(@"   ERROR {0}", ex.Message);
+			}
+
+			return false;
+
+			
+        }
+
+
+
+
+		public async Task<Boolean> SetPaymentMethods(PostPaymentMethods payment){
 
 			var url = string.Format(Constants.PaymentMethodsUrl);
 			var uri = new Uri(url);
@@ -346,7 +426,7 @@ namespace MyCart.Data
 		}
 
 
-		public async Task<Dictionary<string, ShippingQuoteValues>> GetShippingMethods(){
+		public async Task<Dictionary<string, ShippingMethodsValues>> GetShippingMethods(){
 
 			var url = string.Format(Constants.ShippingMethodsUrl);
 			var uri = new Uri(url);
@@ -365,7 +445,18 @@ namespace MyCart.Data
 				var response = await client.GetAsync(uri);
 				var respContent = await response.Content.ReadAsStringAsync();
 
-				Debug.WriteLine(@"   respContent {0}", respContent);
+                ShippingMethodsResp resp = JsonConvert.DeserializeObject<ShippingMethodsResp>(respContent);
+
+
+                Debug.WriteLine(@"   PaymentMethodsResp {0}", resp.data.shipping_methods);
+
+                Debug.WriteLine(@"   PaymentMethodsResp {0}", resp.data.shipping_methods["flat"].title);
+
+
+                Debug.WriteLine(@"   respContent {0}", respContent);
+
+                return resp.data.shipping_methods;
+
 
 			}
 			catch (Exception ex)
@@ -468,8 +559,6 @@ namespace MyCart.Data
             return false;
 
 		}
-
-
 
 	}
 }
