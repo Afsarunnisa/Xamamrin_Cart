@@ -514,9 +514,7 @@ namespace MyCart.Data
 					token = App.Current.Properties["AccessToken"] as string;
 				}
 
-				//var json = JsonConvert.SerializeObject(payment);
-                //var content = new StringContent(null, Encoding.UTF8, "application/json");
-                var response = await client.PostAsync(uri, null);
+				var response = await client.PostAsync(uri, null);
 				var respContent = await response.Content.ReadAsStringAsync();
 
 				Debug.WriteLine(@"   respContent {0}", respContent);

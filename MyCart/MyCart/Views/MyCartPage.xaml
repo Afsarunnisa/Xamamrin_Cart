@@ -34,6 +34,16 @@
 
                                     </StackLayout>
 
+                                    <StackLayout HorizontalOptions="EndAndExpand">
+                                          <Button x:Name="cartWishBtn" Text="Fav" CommandParameter="{Binding name}"
+                                                HorizontalOptions="End" 
+                                                WidthRequest="50" HeightRequest="50" Image="Favorite" />
+
+                                            <Button x:Name="cartDeleteBtn" Text="Fav" CommandParameter="{Binding name}"
+                                                HorizontalOptions="End" 
+                                                WidthRequest="50" HeightRequest="50" Image="Favorite" />
+                                        
+                                    </StackLayout>
 
                                 </StackLayout>
 

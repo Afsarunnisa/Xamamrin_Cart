@@ -24,12 +24,9 @@ namespace MyCart.Views
 
             if(isUserLogin == "true"){
                 this.Navigation.PushAsync(new PaymentMethodsPage());
-
 			}else{
 				this.Navigation.PushAsync(new GuestCheckOutPage());
-
 			}
-
 
 		}
 	}
