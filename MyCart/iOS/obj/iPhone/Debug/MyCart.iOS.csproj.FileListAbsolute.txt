@@ -57,3 +57,8 @@
 /Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/iOS/obj/iPhone/Debug/MyCart.iOS.csproj.CoreCompileInputs.cache
 /Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/iOS/obj/iPhone/Debug/MyCart.iOS.exe
 /Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/iOS/obj/iPhone/Debug/MyCart.iOS.pdb
+/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/iOS/bin/iPhone/Debug/DLToolkit.Forms.Controls.FlowListView.dll
+/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/iOS/bin/iPhone/Debug/DLToolkit.Forms.Controls.FlowListView.xml
+/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/iOS/obj/iPhone/Debug/device-builds/iphone9.4-11.0/optimized/iphone.png
+/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/iOS/obj/iPhone/Debug/device-builds/iphone9.4-11.0/optimized/macbook.png
+/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/iOS/obj/iPhone/Debug/MyCart.iOS.csprojResolveAssemblyReference.cache

@@ -17,7 +17,7 @@ namespace MyCart.Data
 			restService = service;
 		}
 
-		public Task GetToken()
+		public Task<Boolean> GetToken()
 		{
             return restService.GetTokenAsync();
 		}
@@ -27,6 +27,12 @@ namespace MyCart.Data
             return restService.GetAllProducts(productId, storeID);
 
 		}
+
+        public Task<List<FeaturedProducts>> GetFeaturedProducts()
+		{
+            return restService.GetFeaturedProducts();
+		}
+
 
         public Task<List<Category>> GetCategories()
 		{

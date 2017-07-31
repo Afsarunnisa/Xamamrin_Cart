@@ -33,7 +33,6 @@ namespace MyCart.ViewModel
         {
 
 			Stores = new ObservableCollection<Store>();
-
 			this.GetStores();
         }
 
@@ -47,7 +46,10 @@ namespace MyCart.ViewModel
 				foreach (var store in data)
 				{
                     Stores.Add(store);
+					Stores.Add(store);
+					
 				}
+
 			}
 			catch (Exception e)
 			{

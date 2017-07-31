@@ -341,4 +341,84 @@ namespace MyCart.Models
 	}
 
 
+    public class FeaturedProductResp{
+
+		[JsonProperty("success")]
+		public string success { get; set; }
+
+		[JsonProperty("data")]
+		public List<FeaturedProductData> data { get; set; }
+
+    }
+
+
+	public class FeaturedProductData
+	{
+
+		[JsonProperty("module_id")]
+		public string module_id { get; set; }
+
+
+		[JsonProperty("name")]
+		public string name { get; set; }
+
+		[JsonProperty("code")]
+		public string code { get; set; }
+
+
+		[JsonProperty("products")]
+		public List<FeaturedProducts> products { get; set; }
+
+	}
+
+
+	public class FeaturedProducts
+    {
+		[JsonProperty("product_id")]
+		public string product_id { get; set; }
+
+
+		[JsonProperty("thumb")]
+		public string thumb { get; set; }
+
+		[JsonProperty("name")]
+		public string name { get; set; }
+
+		[JsonProperty("price_excluding_tax")]
+		public string price_excluding_tax { get; set; }
+
+
+		[JsonProperty("price")]
+		public string price { get; set; }
+
+		[JsonProperty("price_formated")]
+		public string price_formated { get; set; }
+
+		[JsonProperty("special")]
+		public string special { get; set; }
+
+
+		[JsonProperty("special_excluding_tax")]
+		public string special_excluding_tax { get; set; }
+
+		[JsonProperty("special_formated")]
+		public string special_formated { get; set; }
+
+
+		[JsonProperty("rating")]
+        public int rating { get; set; }
+
+		[JsonProperty("special_start_date")]
+		public string special_start_date { get; set; }
+
+
+		[JsonProperty("special_end_date")]
+		public string special_end_date { get; set; }
+
+		[JsonProperty("description")]
+		public string description { get; set; }
+
+	}
+
+
 }

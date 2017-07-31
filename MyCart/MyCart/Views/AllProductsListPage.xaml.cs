@@ -19,7 +19,10 @@ namespace MyCart.Views
             InitializeComponent();
 			BindingContext = new AllProductsListViewModel(productID, storeID);
 
-        }
+
+			ProductsListView.SelectedItem = null;
+
+		}
 
         // on product slection  
 

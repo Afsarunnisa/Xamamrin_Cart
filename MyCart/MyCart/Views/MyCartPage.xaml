@@ -41,51 +41,13 @@
 
                                             <Button x:Name="cartDeleteBtn" Text="Fav" CommandParameter="{Binding name}"
                                                 HorizontalOptions="End" 
-                                                WidthRequest="50" HeightRequest="50" Image="Favorite" />
+                                                WidthRequest="50" HeightRequest="50" Image="delete" />
                                         
                                     </StackLayout>
 
                                 </StackLayout>
 
-<!--                                <Button Text="Remove" BorderRadius="0" TextColor="Black" HeightRequest = "30"/>
---><!--                                                                <Button Text="Remove" BorderRadius="0" TextColor="Black" HeightRequest = "30" Clicked="Remove_Cart_Clicked"/>
--->
 
-
-                                   <!-- <StackLayout Orientation="Vertical"
-                                                 Spacing="0">
-
-                                        <BoxView HeightRequest="0.5"
-                                                 HorizontalOptions="FillAndExpand"
-                                                 VerticalOptions="EndAndExpand"
-                                                 Color="#D3D3D3" />
-
-                                        <StackLayout Orientation="Horizontal">
-
-                                            <Button Text="Remove" TextColor="Black"
-                                                    HeightRequest="30"
-                                                    BorderColor="Transparent"
-                                                    BorderWidth="0"
-                                                    BorderRadius="0"
-                                                    HorizontalOptions="CenterAndExpand"
-                                                    VerticalOptions="CenterAndExpand"/>
-
-                                              <BoxView WidthRequest="0.5"
-                                                     HorizontalOptions="CenterAndExpand"
-                                                     VerticalOptions="FillAndExpand"
-                                                     Color="#D3D3D3" />
-                                        
-                                            <Button Text="Add to wishlist" TextColor="Black"
-                                                        HeightRequest="30"
-                                                        BorderColor="Transparent"
-                                                        BorderWidth="0"
-                                                        BorderRadius="0"
-                                                        HorizontalOptions="CenterAndExpand"
-                                                        VerticalOptions="CenterAndExpand"/>
-                                        
-                                        </StackLayout>
-
-                                    </StackLayout>-->
                             
                                 </StackLayout>
 
@@ -97,9 +59,9 @@
 
         </ListView>
 
-        <Button Text="Proceed To Checkout" BorderRadius="0" TextColor="White" HeightRequest = "50" BackgroundColor = "#77d065" VerticalOptions="EndAndExpand" Clicked="Checkout_Cart_Clicked"/>
+        <Button Text="Proceed To Checkout" BorderRadius="0" TextColor="White" HeightRequest = "50" BackgroundColor = "#77d065" VerticalOptions="End" Clicked="Checkout_Cart_Clicked"/>
 
-    </StackLayout>
+        </StackLayout>
 
         
 	</ContentPage.Content>

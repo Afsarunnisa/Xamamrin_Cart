@@ -34,7 +34,10 @@ namespace MyCart
 
 
 			MainPage = new MainPage();
-        }
+
+            //MainPage = new HomePage();
+
+		}
 
         protected override void OnStart()
         {

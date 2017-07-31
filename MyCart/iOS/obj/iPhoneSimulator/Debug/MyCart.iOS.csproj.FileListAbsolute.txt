@@ -1,5 +1,6 @@
 /Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/iOS/bin/iPhoneSimulator/Debug/MyCart.iOS.exe
 /Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/iOS/bin/iPhoneSimulator/Debug/MyCart.iOS.pdb
+/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/iOS/bin/iPhoneSimulator/Debug/DLToolkit.Forms.Controls.FlowListView.dll
 /Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/iOS/bin/iPhoneSimulator/Debug/MyCart.dll
 /Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/iOS/bin/iPhoneSimulator/Debug/Newtonsoft.Json.dll
 /Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Core.dll
@@ -16,6 +17,7 @@
 /Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Xaml.dll.mdb
 /Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Xaml.xml
 /Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/iOS/bin/iPhoneSimulator/Debug/Newtonsoft.Json.xml
+/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/iOS/bin/iPhoneSimulator/Debug/DLToolkit.Forms.Controls.FlowListView.xml
 /Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/iOS/bin/iPhoneSimulator/Debug/ar/Xamarin.Forms.Platform.iOS.resources.dll
 /Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/iOS/bin/iPhoneSimulator/Debug/ca/Xamarin.Forms.Platform.iOS.resources.dll
 /Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/iOS/bin/iPhoneSimulator/Debug/cs/Xamarin.Forms.Platform.iOS.resources.dll
@@ -50,10 +52,12 @@
 /Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/iOS/bin/iPhoneSimulator/Debug/zh-HK/Xamarin.Forms.Platform.iOS.resources.dll
 /Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/iOS/bin/iPhoneSimulator/Debug/zh-Hans/Xamarin.Forms.Platform.iOS.resources.dll
 /Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/iOS/bin/iPhoneSimulator/Debug/zh-Hant/Xamarin.Forms.Platform.iOS.resources.dll
-/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/ibtool/_BundleResourceWithLogicalName.items
-/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/actool/_PartialAppManifest.items
-/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/actool/_BundleResourceWithLogicalName.items
-/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/optimized/
+/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone8.4-10.3.1/ibtool/_BundleResourceWithLogicalName.items
+/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone8.4-10.3.1/actool/_PartialAppManifest.items
+/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone8.4-10.3.1/actool/_BundleResourceWithLogicalName.items
+/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone8.4-10.3.1/optimized/iphone.png
+/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone8.4-10.3.1/optimized/macbook.png
+/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone8.4-10.3.1/optimized/
 /Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/iOS/obj/iPhoneSimulator/Debug/MyCart.iOS.csprojResolveAssemblyReference.cache
 /Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/iOS/obj/iPhoneSimulator/Debug/MyCart.iOS.csproj.CoreCompileInputs.cache
 /Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/iOS/obj/iPhoneSimulator/Debug/MyCart.iOS.exe

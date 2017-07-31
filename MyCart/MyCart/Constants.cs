@@ -11,8 +11,10 @@ namespace MyCart
 		public static string ProductsUrl = "http://oc.qa.nbos.in/api/rest/products/";
 		public static string CategoriesUrl = "http://oc.qa.nbos.in/api/rest/categories";
 
+		public static string FeaturedProductsUrl = "http://oc.qa.nbos.in/api/rest/featured";
 
-        public static string CartUrl = "http://oc.qa.nbos.in/api/rest/cart";
+
+		public static string CartUrl = "http://oc.qa.nbos.in/api/rest/cart";
 
 		public static string StoreUrl = "http://oc.qa.nbos.in/api/rest/stores";
 

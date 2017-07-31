@@ -44,9 +44,12 @@ namespace MyCart.Views
 			menuListView.ItemsSource = menuList;
 
 
-			Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(DashboardPage)));
+            Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(DashboardPage))){
+                BarBackgroundColor = Color.FromHex("#77D065"),
+                BarTextColor = Color.White,
+            };
 
-            App.RestApiManager.GetToken();
+
 		}
 
 		private void OnMenuItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -58,9 +61,17 @@ namespace MyCart.Views
 
             if(item.Title == "All Products"){
 				Page displayPage = (Page)Activator.CreateInstance(page, "0", "0");
-				Detail = new NavigationPage(displayPage);
+				Detail = new NavigationPage(displayPage)
+				{
+					BarBackgroundColor = Color.FromHex("#77D065"),
+					BarTextColor = Color.White,
+				};
             }else{
-				Detail = new NavigationPage((Page)Activator.CreateInstance(page));
+				Detail = new NavigationPage((Page)Activator.CreateInstance(page))
+				{
+					BarBackgroundColor = Color.FromHex("#77D065"),
+					BarTextColor = Color.White,
+				};
 			}
 
  

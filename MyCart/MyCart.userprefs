@@ -1,41 +1,31 @@
 ﻿<Properties StartupConfiguration="{6549ED18-2921-4E5C-82F3-8C3585B91CA3}|Default">
-  <MonoDevelop.Ide.ItemProperties.MyCart.Droid PreferredExecutionTarget="Android.Android_ARMv7a" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MyCart/ViewModel/GuestCheckOutViewModel.cs">
+  <MonoDevelop.Ide.ItemProperties.MyCart.Droid PreferredExecutionTarget="Android.Android_Accelerated_x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MyCart/Views/DashboardPage.xaml.cs">
     <Files>
-      <File FileName="MyCart/Views/MainPage.xaml" Line="16" Column="74" />
-      <File FileName="MyCart/Views/ProductDetailsPage.xaml" Line="44" Column="17" />
-      <File FileName="MyCart/Controls/HtmlLabel.cs" Line="5" Column="2" />
-      <File FileName="Droid/HtmlLabelRenderer.cs" Line="27" Column="4" />
-      <File FileName="iOS/HtmlLabelRenderer.cs" Line="12" Column="1" />
-      <File FileName="MyCart/Views/ProductDetailsPage.xaml.cs" Line="1" Column="1" />
-      <File FileName="MyCart/Views/MyCartPage.xaml" Line="100" Column="126" />
-      <File FileName="MyCart/Views/AllProductsListPage.xaml" Line="56" Column="105" />
-      <File FileName="MyCart/Views/MyCartPage.xaml.cs" Line="28" Column="1" />
-      <File FileName="MyCart/ViewModel/LoginViewModel.cs" Line="110" Column="1" />
-      <File FileName="iOS/Main.cs" Line="11" Column="6" />
-      <File FileName="MyCart/Data/RestService.cs" Line="551" Column="1" />
-      <File FileName="MyCart/ViewModel/PaymentMethodsViewModel.cs" Line="175" Column="1" />
-      <File FileName="MyCart/ViewModel/GuestCheckOutViewModel.cs" Line="93" Column="1" />
+      <File FileName="MyCart/Views/DashboardPage.xaml.cs" Line="143" Column="52" />
+      <File FileName="MyCart/Controls/CardViewTemplate.xaml" Line="22" Column="37" />
+      <File FileName="MyCart/Views/AllProductsListPage.xaml" Line="22" Column="51" />
+      <File FileName="MyCart/Controls/FeaturedProductViewTemplate.xaml" Line="22" Column="62" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/Views/AllProductsListPage.xaml.cs" relfile="MyCart/Views/AllProductsListPage.xaml.cs" line="48" column="1" />
+      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/Views/AllProductsListPage.xaml.cs" relfile="MyCart/Views/AllProductsListPage.xaml.cs" line="51" column="1" />
       <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/ViewModel/GuestCheckOutViewModel.cs" relfile="MyCart/ViewModel/GuestCheckOutViewModel.cs" line="42" column="1" />
       <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/ViewModel/GuestCheckOutViewModel.cs" relfile="MyCart/ViewModel/GuestCheckOutViewModel.cs" line="27" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/Data/RestService.cs" relfile="MyCart/Data/RestService.cs" line="522" column="57" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/Data/RestService.cs" relfile="MyCart/Data/RestService.cs" line="528" column="1" />
+      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/Data/RestService.cs" relfile="MyCart/Data/RestService.cs" line="560" column="57" />
+      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/Data/RestService.cs" relfile="MyCart/Data/RestService.cs" line="566" column="1" />
       <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/ViewModel/PaymentMethodsViewModel.cs" relfile="MyCart/ViewModel/PaymentMethodsViewModel.cs" line="175" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/Data/RestService.cs" relfile="MyCart/Data/RestService.cs" line="551" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/Data/RestService.cs" relfile="MyCart/Data/RestService.cs" line="556" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/Data/RestService.cs" relfile="MyCart/Data/RestService.cs" line="524" column="23" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/Data/RestService.cs" relfile="MyCart/Data/RestService.cs" line="357" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/Data/RestService.cs" relfile="MyCart/Data/RestService.cs" line="354" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/Data/RestService.cs" relfile="MyCart/Data/RestService.cs" line="451" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/Data/RestService.cs" relfile="MyCart/Data/RestService.cs" line="458" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/Data/RestService.cs" relfile="MyCart/Data/RestService.cs" line="456" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/Data/RestService.cs" relfile="MyCart/Data/RestService.cs" line="453" column="1" />
+      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/Data/RestService.cs" relfile="MyCart/Data/RestService.cs" line="589" column="1" />
+      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/Data/RestService.cs" relfile="MyCart/Data/RestService.cs" line="594" column="1" />
+      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/Data/RestService.cs" relfile="MyCart/Data/RestService.cs" line="562" column="23" />
+      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/Data/RestService.cs" relfile="MyCart/Data/RestService.cs" line="397" column="1" />
+      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/Data/RestService.cs" relfile="MyCart/Data/RestService.cs" line="394" column="1" />
+      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/Data/RestService.cs" relfile="MyCart/Data/RestService.cs" line="491" column="1" />
+      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/Data/RestService.cs" relfile="MyCart/Data/RestService.cs" line="498" column="1" />
+      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/Data/RestService.cs" relfile="MyCart/Data/RestService.cs" line="496" column="1" />
+      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/Data/RestService.cs" relfile="MyCart/Data/RestService.cs" line="493" column="1" />
       <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/ViewModel/GuestCheckOutViewModel.cs" relfile="MyCart/ViewModel/GuestCheckOutViewModel.cs" line="136" column="1" />
       <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/ViewModel/GuestCheckOutViewModel.cs" relfile="MyCart/ViewModel/GuestCheckOutViewModel.cs" line="114" column="1" />
       <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/ViewModel/GuestCheckOutViewModel.cs" relfile="MyCart/ViewModel/GuestCheckOutViewModel.cs" line="127" column="1" />
@@ -47,21 +37,17 @@
       <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/ViewModel/GuestCheckOutViewModel.cs" relfile="MyCart/ViewModel/GuestCheckOutViewModel.cs" line="96" column="1" />
       <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/ViewModel/LoginViewModel.cs" relfile="MyCart/ViewModel/LoginViewModel.cs" line="110" column="1" />
       <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/ViewModel/LoginViewModel.cs" relfile="MyCart/ViewModel/LoginViewModel.cs" line="108" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/Data/RestService.cs" relfile="MyCart/Data/RestService.cs" line="51" column="50" />
+      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/Data/RestService.cs" relfile="MyCart/Data/RestService.cs" line="57" column="50" />
       <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/ViewModel/LoginViewModel.cs" relfile="MyCart/ViewModel/LoginViewModel.cs" line="103" column="1" />
       <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/ViewModel/LoginViewModel.cs" relfile="MyCart/ViewModel/LoginViewModel.cs" line="99" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/Data/RestService.cs" relfile="MyCart/Data/RestService.cs" line="82" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/Data/RestService.cs" relfile="MyCart/Data/RestService.cs" line="84" column="1" />
+      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/Data/RestService.cs" relfile="MyCart/Data/RestService.cs" line="88" column="1" />
+      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/Data/RestService.cs" relfile="MyCart/Data/RestService.cs" line="90" column="1" />
       <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/ViewModel/SignUpViewModel.cs" relfile="MyCart/ViewModel/SignUpViewModel.cs" line="102" column="1" />
       <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/ViewModel/SignUpViewModel.cs" relfile="MyCart/ViewModel/SignUpViewModel.cs" line="97" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/Data/RestService.cs" relfile="MyCart/Data/RestService.cs" line="383" column="29" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/Views/MyCartPage.xaml.cs" relfile="MyCart/Views/MyCartPage.xaml.cs" line="23" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/Views/MyCartPage.xaml.cs" relfile="MyCart/Views/MyCartPage.xaml.cs" line="25" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/Views/MyCartPage.xaml.cs" relfile="MyCart/Views/MyCartPage.xaml.cs" line="26" column="1" />
-      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/Views/MyCartPage.xaml.cs" relfile="MyCart/Views/MyCartPage.xaml.cs" line="28" column="1" />
+      <Breakpoint file="/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/Data/RestService.cs" relfile="MyCart/Data/RestService.cs" line="423" column="29" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.MyCart.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.A724B745-2CDE-4AF8-9452-CBBB4646E053" />
+  <MonoDevelop.Ide.ItemProperties.MyCart.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.008FE7E6-B797-4FF4-98ED-24BC069E7A4C" />
 </Properties>

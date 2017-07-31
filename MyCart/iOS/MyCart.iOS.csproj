@@ -101,6 +101,9 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\netstandard1.3\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="DLToolkit.Forms.Controls.FlowListView">
+      <HintPath>..\packages\DLToolkit.Forms.Controls.FlowListView.2.0.4\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\DLToolkit.Forms.Controls.FlowListView.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MyCart\MyCart.csproj">
@@ -147,6 +150,19 @@
     <ImageAsset Include="Assets.xcassets\Store.imageset\store.png" />
     <ImageAsset Include="Assets.xcassets\Store.imageset\store%402x.png" />
     <ImageAsset Include="Assets.xcassets\Store.imageset\store%403x.png" />
+    <ImageAsset Include="Assets.xcassets\Iphone.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Macbook.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Iphone.imageset\iPhone6-1140x380.jpg" />
+    <ImageAsset Include="Assets.xcassets\Macbook.imageset\MacBookAir-1140x380.jpg" />
+    <ImageAsset Include="Assets.xcassets\Macbook.imageset\MacBookAir-1140x3801.jpg" />
+    <ImageAsset Include="Assets.xcassets\delete.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\delete.imageset\delete.png" />
+    <ImageAsset Include="Assets.xcassets\delete.imageset\delete%402x.png" />
+    <ImageAsset Include="Assets.xcassets\delete.imageset\delete%403x.png" />
+    <ImageAsset Include="Assets.xcassets\menu.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\menu.imageset\menu.png" />
+    <ImageAsset Include="Assets.xcassets\menu.imageset\menu%402x.png" />
+    <ImageAsset Include="Assets.xcassets\menu.imageset\menu%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -159,6 +175,11 @@
     <Folder Include="Assets.xcassets\Contact.imageset\" />
     <Folder Include="Assets.xcassets\Login.imageset\" />
     <Folder Include="Assets.xcassets\Store.imageset\" />
+    <Folder Include="Renderers\" />
+    <Folder Include="Assets.xcassets\Iphone.imageset\" />
+    <Folder Include="Assets.xcassets\Macbook.imageset\" />
+    <Folder Include="Assets.xcassets\delete.imageset\" />
+    <Folder Include="Assets.xcassets\menu.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -172,6 +193,11 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="HtmlLabelRenderer.cs" />
+    <Compile Include="Renderers\CarouselLayoutRenderer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\iphone.png" />
+    <BundleResource Include="Resources\macbook.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.4.231\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.4.231\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />

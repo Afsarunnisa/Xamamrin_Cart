@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             x:Class="MyCart.Views.AllProductsListPage"
+           xmlns:view="clr-namespace:MyCart.Controls;assembly=MyCart"
             Title="Products">
 
 
@@ -12,13 +13,16 @@
 	<ContentPage.Content>
 
         <ListView ItemsSource="{Binding Products}"
-                      CachingStrategy="RecycleElement"
+                      CachingStrategy="RecycleElement" BackgroundColor="#ececec" SeparatorColor="Transparent"
                       RowHeight="120" x:Name="ProductsListView" ItemSelected="OnProductSelected">
 
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Margin="8" Orientation="Horizontal" >
+                            <view:CardViewTemplate/>
+
+                            
+                          <!--  <StackLayout Margin="8" Orientation="Horizontal" >
 
 
                                 <StackLayout>
@@ -59,7 +63,7 @@
 
                              </StackLayout>
 
-                        </StackLayout>
+                        </StackLayout>-->
                         
                         </ViewCell>
 

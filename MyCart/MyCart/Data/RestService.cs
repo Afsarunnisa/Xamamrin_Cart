@@ -23,7 +23,7 @@ namespace MyCart.Data
         }
 
         // Get Oprncart Token
-        public async Task GetTokenAsync()
+        public async Task<Boolean> GetTokenAsync()
         {
 
             var url = string.Format(Constants.TokenUrl);
@@ -39,12 +39,18 @@ namespace MyCart.Data
                 Token mytoken = JsonConvert.DeserializeObject<Token>(content);
 
                 App.Current.Properties["AccessToken"] = mytoken.access_token;
+
+                Debug.WriteLine("token {0}", mytoken.access_token);
+
+                return true;
             }
             catch (Exception ex)
             {
                 Debug.WriteLine(@"   ERROR {0}", ex.Message);
             }
-        }
+            return false;
+
+		}
 
         public async Task<Boolean> NbosOcConnect(){
 
@@ -126,6 +132,40 @@ namespace MyCart.Data
 
 			return null;
 		}
+
+        public async Task<List<FeaturedProducts>> GetFeaturedProducts(){
+
+            var url = string.Format(Constants.FeaturedProductsUrl);
+			var uri = new Uri(url);
+
+            try{
+
+				string token = "";
+
+				if (App.Current.Properties.ContainsKey("AccessToken"))
+				{
+					token = App.Current.Properties["AccessToken"] as string;
+				}
+
+				client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+
+				var response = await client.GetAsync(url);
+				var content = await response.Content.ReadAsStringAsync();
+
+                FeaturedProductResp resp = JsonConvert.DeserializeObject<FeaturedProductResp>(content);
+                return resp.data[0].products;
+
+
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine(@"   ERROR {0}", ex.Message);
+			}
+
+			return null;
+        }
+
 
 
 		public async Task<List<Products>> GetAllProducts(string productId, string storeID)

@@ -4,16 +4,16 @@
             x:Class="MyCart.Views.MainPage">
 
     <MasterDetailPage.Master>
-        <ContentPage Title = "test">
+        <ContentPage Title = "☰" Icon="menu">
 
-            <StackLayout x:Name="mainLayout" Orientation="Vertical" BackgroundColor="#1898bd" >
+            <StackLayout x:Name="mainLayout" Orientation="Vertical" BackgroundColor="#FFFFFF" Opacity="0.7">
 
-                    <StackLayout HeightRequest="65">
-                      <Label TextColor="Black"/>
+                    <StackLayout HeightRequest="65" BackgroundColor = "#77D065" >
+                      <Label Margin="30" TextColor="White" Text="Menu" FontAttributes="Bold" />
                     </StackLayout>
 
                     <ListView x:Name="menuListView" RowHeight="60" ItemSelected="OnMenuItemSelected" 
-                                Margin="0,0,0,0" BackgroundColor="#77d065">
+                                Margin="0,0,0,0" BackgroundColor="#FFFFFF" Opacity="0.7">
                         <ListView.ItemTemplate>
                             <DataTemplate >
                                 <ViewCell>

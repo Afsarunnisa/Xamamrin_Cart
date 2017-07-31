@@ -10,12 +10,14 @@ namespace MyCart.Data
     public interface IRestService
     {
 
-        Task GetTokenAsync();
+        Task<Boolean> GetTokenAsync();
 
 		Task<List<Store>> GetAllStores();
 
 		Task <List<Products>> GetAllProducts(string productId, string storeID);
         Task<List<Category>> GetAllCategories();
+
+        Task<List<FeaturedProducts>> GetFeaturedProducts();
 
 
         Task<Boolean> AddToCart(AddCart cart);

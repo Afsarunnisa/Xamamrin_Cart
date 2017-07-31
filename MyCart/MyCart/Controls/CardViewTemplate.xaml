@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+            x:Class="MyCart.Controls.CardViewTemplate">
+	<ContentView.Content>
+
+         <Frame IsClippedToBounds="True"
+              HasShadow="True"
+              BackgroundColor="White">
+
+            <Frame.OutlineColor>
+                <OnPlatform x:TypeArguments="Color"
+                        Android="#cccccc"
+                        iOS="#cccccc"/>
+           </Frame.OutlineColor>
+
+            <Frame.Margin>
+                <OnPlatform x:TypeArguments="Thickness"
+                         Android="6,6,6,0" iOS="6,6,6,0"/>
+            </Frame.Margin>
+
+            <StackLayout Orientation="Horizontal" >
+
+            <StackLayout Orientation="Horizontal" >
+
+                    <Image Source="{Binding image}" HeightRequest="60" WidthRequest="60"
+                                        VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand"/>
+                
+                   <BoxView Color="{Binding AlertColor}" WidthRequest="4"/>
+                     <Grid VerticalOptions="CenterAndExpand"
+                     HorizontalOptions="FillAndExpand"
+                     Padding="0" 
+                     BackgroundColor="Transparent">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label FontAttributes="Bold"
+                           Grid.Row="0"
+                           HorizontalTextAlignment="Start"
+                           VerticalTextAlignment="Center"
+                           FontSize="16"
+                           Text="{Binding name, Mode = TwoWay}">
+                      <Label.LineBreakMode>
+                          <OnPlatform x:TypeArguments="LineBreakMode"
+                                      Android="NoWrap" iOS="TailTruncation"/>
+                      </Label.LineBreakMode>
+                      </Label>
+                <!-- <BoxView Grid.Row="1" Color="Gray"
+                          HorizontalOptions="FillAndExpand"
+                          HeightRequest="1"/>-->
+                 <Grid Grid.Row="1"
+                       BackgroundColor="Transparent"
+                       Padding="4">
+                       <Grid.ColumnDefinitions>
+                             <ColumnDefinition Width="Auto" />
+                             <ColumnDefinition />
+                       </Grid.ColumnDefinitions>
+                       <Label Grid.Row="0"
+                              Grid.Column="0"
+                              Text="{Binding price}"/>
+                       <Label Grid.Row="0"
+                              Grid.Column="1"
+                              Text="{Binding Owner, Mode = TwoWay}"/>
+                  </Grid>
+             </Grid>
+
+
+                    
+           </StackLayout>
+
+<!--                <StackLayout BackgroundColor="Olive" HorizontalOptions="EndAndExpand">
+-->
+                
+                <Button x:Name="wishBtn" Text="Fav" CommandParameter="{Binding name}"
+                                    HorizontalOptions="EndAndExpand" 
+                                    WidthRequest="50" HeightRequest="50" Image="Favorite" />
+<!--                </StackLayout>
+-->
+            </StackLayout>
+
+        </Frame>
+
+	</ContentView.Content>
+</ContentView>
