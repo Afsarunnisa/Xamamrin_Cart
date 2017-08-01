@@ -74,55 +74,10 @@ namespace MyCart.ViewModel
                shippingValue = await App.RestApiManager.AddGuestShipping(guestUser);
             }
 
-            if(shippingValue == true){
-				await _navigation.PushAsync(new PaymentMethodsPage());
+            if (shippingValue == true)
+            {
+                await _navigation.PushAsync(new PaymentMethodsPage());
             }
-
-
-   //         if(shippingValue == true){
-
-   //             Dictionary<string, ShippingMethodsValues> shippingMethiods = await App.RestApiManager.GetShippingMethods();
-
-			//	var arrayOfAllKeys = shippingMethiods.Keys.ToArray();
-
-   //             foreach (var shipping in arrayOfAllKeys){
-
-			//		Debug.WriteLine("shippingMethiodsNAME {0}", shipping);
-
-			//		Debug.WriteLine("shippingMethiods.Keys {0}", shippingMethiods[shipping]);
-
-   //                 ShippingMethodsValues val = shippingMethiods[shipping];
-
-
-   //                 Debug.WriteLine("val {0}", val.title);
-
-
-			//	}
-
-
-
-
-
-			//	PostShippingMethods shippingMethod = new PostShippingMethods()
-			//	{
-			//	    comment = "simple comment",
-			//	    shipping_method = "flat.flat"
-			//	};
-
-   //             Boolean shippingMethodSuc = await App.RestApiManager.SetShippingMethod(shippingMethod);
-
-
-   //             Debug.WriteLine("shippingMethodSuc {0}", shippingMethodSuc);
-
-   //             if(shippingMethodSuc == true){
-			//		await _navigation.PushAsync(new PaymentMethodsPage());
-
-			//	}
-    
-
-			//}
-
-
 
 		}
 

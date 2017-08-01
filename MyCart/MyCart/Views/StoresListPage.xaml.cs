@@ -22,9 +22,14 @@ namespace MyCart.Views
 
         private void OnStoreSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            
-            var item = (Store)e.SelectedItem;
+			if (e.SelectedItem == null) return; // don't do anything if we just de-selected the row
+
+			var item = (Store)e.SelectedItem;
             Navigation.PushAsync(new AllProductsListPage("0", item.id));
+
+			((ListView)sender).SelectedItem = null; // de-select the row
+
+
 
 		}
     }

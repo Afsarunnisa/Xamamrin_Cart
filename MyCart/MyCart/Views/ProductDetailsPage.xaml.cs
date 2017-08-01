@@ -21,8 +21,16 @@ namespace MyCart.Views
      		BindingContext = product;
             currentProduct = product;
 
+           // productName.FontSize = 30;
+
         }
 
+		// On cart click  
+
+		private void Cart_Clicked(object sender, EventArgs e)
+		{
+			this.Navigation.PushAsync(new MyCartPage());
+		}
 
 		async void Add_Cart_Clicked(object sender, EventArgs e)
 		{

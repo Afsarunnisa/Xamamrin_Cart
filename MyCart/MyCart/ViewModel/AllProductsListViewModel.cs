@@ -16,6 +16,7 @@ namespace MyCart.ViewModel
 {
     public class AllProductsListViewModel : INotifyPropertyChanged
     {
+        
 
         private ObservableCollection<Products> products;
 		public ObservableCollection<Products> Products

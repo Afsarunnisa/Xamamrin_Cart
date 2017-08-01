@@ -28,6 +28,7 @@ namespace MyCart
 			_ = new TokenIdsRegistry();
 			_ = new IdentityIdsRegistry();
             App.Current.Properties["UserLogin"] = "false";
+			App.Current.Properties["IsSplash"] = "false";
 
 
 			RestApiManager = new ApiManager(new RestService());

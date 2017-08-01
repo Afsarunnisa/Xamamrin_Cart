@@ -27,12 +27,19 @@ namespace MyCart.Views
         // on product slection  
 
 		private void OnProductSelected(object sender, SelectedItemChangedEventArgs e)
-		{
+        {
+			if (e.SelectedItem == null) return; // don't do anything if we just de-selected the row
 
-            var item = (Products)e.SelectedItem;
+
+
+			var item = (Products)e.SelectedItem;
 
 			// Navigation to product details  
 			Navigation.PushAsync(new ProductDetailsPage(item));
+
+			((ListView)sender).SelectedItem = null; // de-select the row
+
+
 
 		}
 

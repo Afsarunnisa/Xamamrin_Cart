@@ -5,47 +5,51 @@
             Title="Confirm Checkout">
 	<ContentPage.Content>
 
-    <StackLayout Spacing="20" Padding="20" >
+    <StackLayout Padding ="30" >
+
+            <Label Text="Shipping Methods" Font="22" TextColor="#06A2CB"/>
+
+            <Grid Padding = "20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="25" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+<!--                <StackLayout Padding ="20">
+-->                <Image Grid.Row="0" Grid.Column="0" Source="CheckActive" Aspect="AspectFit" HeightRequest="25" WidthRequest= "25"/>
+                <Label Text="Flat Shipping Rate" Grid.Row="0" Grid.Column="1" />
+
+<!--                </StackLayout>
+-->
+            </Grid>
 
 
-            <Label Text="Shipping Methods" Font="22" TextColor="Green"/>
+            <Label Text="Payment Methods" Font="22" TextColor="#06A2CB"/>
+            
+           <Grid Padding = "20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="25" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
 
-            <ListView ItemsSource="{Binding ShippingValues}" RowHeight="40" x:Name="ShippingMethodsListView" >
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <StackLayout Margin="8" Orientation="Horizontal">
-                                <Label Text ="{Binding title}" FontAttributes="Bold"/>
-                                <Label Text ="{Binding cost}" />
+<!--                                <StackLayout Padding ="20">
+-->
+                <Image Grid.Row="0" Grid.Column="0" Source="CheckActive" Aspect="AspectFit" HeightRequest="25" WidthRequest= "25"/>
+                <Label Text="Cash On Delivery" Grid.Row="0" Grid.Column="1" />
 
-                            </StackLayout>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+<!--                                </StackLayout>
+-->
+            </Grid>
 
-            <Label Text="Payment Methods" Font="22" TextColor="Green"/>
-
-            <ListView ItemsSource="{Binding PaymentValues}" RowHeight="60" x:Name="PaymentMethodsListView" >
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <StackLayout Margin="8" Orientation="Horizontal">
-                                <Label Text ="{Binding title}" FontAttributes="Bold"/>
-
-                            </StackLayout>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-
-
+            
         <Button x:Name="CheckOut" Text="Checkout" TextColor="White"
-            BackgroundColor="#77D065" VerticalOptions="End" Command="{Binding CheckOutBtnCommand}"/>
-
-       <!-- <Button x:Name="CheckOut" Text="Checkout" TextColor="White"
-                BackgroundColor="#77D065"
-                Command="{Binding CheckoutBtnCommand}" VerticalOptions="End"/>-->
+            BackgroundColor="#06A2CB" VerticalOptions="EndAndExpand" Command="{Binding CheckOutBtnCommand}"/>
 
 
     </StackLayout>

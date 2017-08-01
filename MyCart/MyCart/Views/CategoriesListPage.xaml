@@ -1,27 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            x:Class="MyCart.Views.CategoriesListPage">
+            x:Class="MyCart.Views.CategoriesListPage"
+            Title="Categories">
 	<ContentPage.Content>
       <ListView ItemsSource="{Binding Categories}"
                       CachingStrategy="RecycleElement"
-                      RowHeight="120" x:Name="CategoriesListView" ItemSelected="OnCategorySelected">
+                      RowHeight="60" x:Name="CategoriesListView" ItemSelected="OnCategorySelected">
 
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Margin="8" Orientation="Horizontal" >
 
-                                <Image Source="{Binding image}" />
+                                <Image Source="{Binding image}" VerticalOptions="Center" />
 
 
                                 <StackLayout Margin="8"  >
 
                                 <Label Text="{Binding name}"
-                                       FontAttributes="Bold" />
+                                       FontAttributes="Bold">
 
-<!--                                <Label Text="{Binding price}"  />
--->                                </StackLayout>
+
+                                    <Label.FontFamily>
+                                    <OnPlatform x:TypeArguments="x:String">
+                                        <OnPlatform.iOS>SourceSansPro-Regular</OnPlatform.iOS>
+                                        <OnPlatform.Android></OnPlatform.Android>
+                                        <OnPlatform.WinPhone></OnPlatform.WinPhone>
+                                    </OnPlatform>
+                                      </Label.FontFamily>
+                                    
+                                </Label>
+
+                                </StackLayout>
 
                             </StackLayout>
                         </ViewCell>

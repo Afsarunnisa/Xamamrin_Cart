@@ -67,11 +67,7 @@ namespace MyCart.ViewModel
 
 			var isUserLogin = App.Current.Properties["UserLogin"];
 
-			if (isUserLogin == "true")
-			{
-                this.postPayment();
-			}
-
+			
 			this.GetShippingMethods();
             this.GetPaymentMethods();
 
@@ -79,28 +75,8 @@ namespace MyCart.ViewModel
 			//this.CallApis();
 		}
 
-        private async void postPayment(){
-
-            try{
-
-                Dictionary<string, string> postpaymentDict = new Dictionary<string, string>();
-
-                postpaymentDict.Add("address_1","Kossuth Lajos út 88");
-				postpaymentDict.Add("address_2", "test");
-				postpaymentDict.Add("city", "Budapest");
-
-				postpaymentDict.Add("company_id", "company");
-				postpaymentDict.Add("company", "company");
-				postpaymentDict.Add("country_id", "97");
-
-
-
-            }
-			catch (Exception e)
-			{
-				Debug.WriteLine(e.Message);
-			}
-        }
+    
+		
 
 		private async void GetShippingMethods()
         {
@@ -120,8 +96,7 @@ namespace MyCart.ViewModel
                     ShippingQuoteValues shippingMethodValues = quote[shipping];
 					ShippingValues.Add(shippingMethodValues);
 
-
-
+                    this.PostShippingMethods();
 				}
 			}
 			catch (Exception e)
@@ -133,8 +108,13 @@ namespace MyCart.ViewModel
         private async void GetPaymentMethods(){
 
             try{
-                
-            }
+			 var paymentResponse = await App.RestApiManager.GetPaymentMethods();
+
+                Debug.WriteLine("paymentResponse {0}", paymentResponse);
+
+                this.PostPaymentMethods();
+
+			}
 			catch (Exception e)
 			{
 				Debug.WriteLine(e.Message);
@@ -143,9 +123,9 @@ namespace MyCart.ViewModel
 
 
 
-		private async void CallApis()
+        private async void PostPaymentMethods()
         {
-			await App.RestApiManager.GetPaymentMethods();
+			//await App.RestApiManager.GetPaymentMethods();
 
 			PostPaymentMethods paymentMethod = new PostPaymentMethods()
 			{
@@ -159,12 +139,32 @@ namespace MyCart.ViewModel
 
 			if (paymentMethodSuc == true)
 			{
-				Debug.WriteLine("Call confirm cart");
-
-
+				Debug.WriteLine("Call confirm cart Payment method success");
 
 			}
         }
+
+
+        private async void PostShippingMethods()
+
+		{
+			//await App.RestApiManager.GetPaymentMethods();
+
+            PostShippingMethods shippingMethod = new PostShippingMethods()
+			{
+				comment = "simple comment",
+				shipping_method = "flat.flat"
+			};
+
+            Boolean ShippingMethodSuc = await App.RestApiManager.SetShippingMethod(shippingMethod);
+
+			if (ShippingMethodSuc == true)
+			{
+				Debug.WriteLine("Call confirm cart shipping method success");
+
+			}
+		}
+
 
 
 		private async Task ExecuteOnCheckOutClick()
@@ -172,10 +172,27 @@ namespace MyCart.ViewModel
 
 			Debug.WriteLine("Call confirm cart button");
 
-			await App.RestApiManager.ConfirmCart();
+			var order =await App.RestApiManager.ConfirmCart();
+
+            Debug.WriteLine("Order ID {0}", order.data.order_id);
 
 
+			if(order.data.order_id != ""){
+                var OrerID =  await App.RestApiManager.ConfirmPutCart();
+                var orderstatus = "Order Placed Successfuly... Here is your Order id " + OrerID;
+
+				DisplayAlert("Order", orderstatus);
+
+            }
 		}
+
+
+		public void DisplayAlert(string title, string message)
+		{
+			string[] values = { title, message };
+            MessagingCenter.Send<PaymentMethodsViewModel, string[]>(this, "DisplayAlert", values);
+		}
+
 
 	}
 }

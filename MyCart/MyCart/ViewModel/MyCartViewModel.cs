@@ -29,32 +29,40 @@ namespace MyCart.ViewModel
 			}
 		}
 
+        private string totalItems;
+		public string TotalItems
+		{
+			get { return totalItems; }
+			set
+			{
+				totalItems = value;
+				OnPropertyChanged("TotalItems");
+			}
+		}
+
+		//private string totalPrice;
+		//public string TotalPrice
+		//{
+		//	get { return totalPrice; }
+		//	set
+		//	{
+		//		totalPrice = value;
+		//		OnPropertyChanged("TotalPrice");
+		//	}
+		//}
+
+
+
         public MyCartViewModel()
         {
 			CartItems = new ObservableCollection<CartProducts>();
-
-
-   //         var page1 = new CartProducts() { name="test", thumb="test", price ="10" };
-			//var page2 = new CartProducts() { name = "test", thumb = "test", price = "10" };
-			//var page3 = new CartProducts() { name = "test", thumb = "test", price = "10" };
-			//var page4 = new CartProducts() { name = "test", thumb = "test", price = "10" };
-			//var page5 = new CartProducts() { name = "test", thumb = "test", price = "10" };
-
-
-			//CartItems.Add(page1);
-			//CartItems.Add(page2);
-			//CartItems.Add(page3);
-			//CartItems.Add(page1);
-			//CartItems.Add(page2);
-			//CartItems.Add(page3);
-
-
+            TotalItems = "";
+            //TotalPrice = "";
 
 
 			this.GetCart();
 
-			//App.RestApiManager.GetCart();            this.GetProducts();
-
+			
 		}
 
 
@@ -63,6 +71,9 @@ namespace MyCart.ViewModel
 			try
 			{
 				Cart cartData = await App.RestApiManager.GetCart();
+
+                TotalItems = cartData.data.total;
+                //TotalPrice = cartData.data.total_price
 
                 foreach (var product in cartData.data.products)
 				{

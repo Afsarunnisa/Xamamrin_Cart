@@ -5,29 +5,79 @@
             Title="Login">
 	<ContentPage.Content>
 
-         <StackLayout Spacing="20" x:Name="layout">
+         <StackLayout Padding = "20,40,20,20" Spacing="20" x:Name="layout" >
 
-            <StackLayout  Spacing="20" >
-                <Label Text="User Name" FontSize="20" 
-                 VerticalOptions="Center" FontAttributes="Bold" />
+            <StackLayout  Spacing="10" >
+                <Label Text="User Name" FontSize="16" 
+                 VerticalOptions="Center">
+
+                       <Label.FontFamily>
+                                    <OnPlatform x:TypeArguments="x:String">
+                                        <OnPlatform.iOS>SourceSansPro-Regular</OnPlatform.iOS>
+                                        <OnPlatform.Android></OnPlatform.Android>
+                                        <OnPlatform.WinPhone></OnPlatform.WinPhone>
+                                    </OnPlatform>
+                                      </Label.FontFamily>
+                </Label>
                 <Entry TextColor="Black" Text="{Binding LoginUserObject.username}"
                   HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" />
             </StackLayout>
+            
 
-             <StackLayout  Spacing="20" >
-                <Label Text="Password" FontSize="20"
-                 VerticalOptions="Center" FontAttributes="Bold" />
+             <StackLayout  Spacing="10"  >
+                <Label Text="Password" FontSize="16"
+                 VerticalOptions="Center">
+
+                                    <Label.FontFamily>
+                                    <OnPlatform x:TypeArguments="x:String">
+                                        <OnPlatform.iOS>SourceSansPro-Regular</OnPlatform.iOS>
+                                        <OnPlatform.Android></OnPlatform.Android>
+                                        <OnPlatform.WinPhone></OnPlatform.WinPhone>
+                                    </OnPlatform>
+                                      </Label.FontFamily>
+                                    
+                    
+                </Label>
                 <Entry TextColor="Black" Text="{Binding LoginUserObject.password}"
                   HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" />
             </StackLayout>
 
-            <Button x:Name = "LoginBtn" Text="Login" TextColor="White" BackgroundColor=
-"#77D065" Command="{Binding LoginBtnCommand}" VerticalOptions="End"/>
             
-             <Button x:Name="SignUpBtn" Text="SignUp" TextColor="White"
-                BackgroundColor="#77D065"
-                Command="{Binding SignUpBtnCommand}" VerticalOptions="End"/>
+            <StackLayout Spacing="30" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
 
+            <Button x:Name = "LoginBtn" Text="Login" TextColor="White" HorizontalOptions="FillAndExpand" BackgroundColor=
+                    "#06A2CB" HeightRequest ="36" Opacity="0.8" Command="{Binding LoginBtnCommand}" VerticalOptions="End">
+
+
+                         <Button.FontFamily>
+                                    <OnPlatform x:TypeArguments="x:String">
+                                        <OnPlatform.iOS>SourceSansPro-Regular</OnPlatform.iOS>
+                                        <OnPlatform.Android></OnPlatform.Android>
+                                        <OnPlatform.WinPhone></OnPlatform.WinPhone>
+                                    </OnPlatform>
+                                      </Button.FontFamily>
+                    
+                </Button>
+            
+             <Button x:Name="SignUpBtn" Text="SignUp" TextColor="White" HorizontalOptions="FillAndExpand"
+                BackgroundColor="#06A2CB"  Opacity="0.8" HeightRequest ="36"
+                Command="{Binding SignUpBtnCommand}" VerticalOptions="End">
+
+                  <Button.FontFamily>
+                                    <OnPlatform x:TypeArguments="x:String">
+                                        <OnPlatform.iOS>SourceSansPro-Regular</OnPlatform.iOS>
+                                        <OnPlatform.Android></OnPlatform.Android>
+                                        <OnPlatform.WinPhone></OnPlatform.WinPhone>
+                                    </OnPlatform>
+                                      </Button.FontFamily>
+
+                    
+                </Button>
+
+                
+            </StackLayout>
+
+         
         </StackLayout>
 
 

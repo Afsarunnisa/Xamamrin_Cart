@@ -12,7 +12,7 @@
 	<ContentPage.Content>
         <ScrollView>
          <StackLayout Spacing="20" Padding="20" >
-               <Label TextColor="#77d065" FontSize = "20" Text="Your Personal Details" />
+               <Label TextColor="#06A2CB" FontSize = "20" Text="Your Personal Details" />
 
                 <Entry x:Name="FirstName" Placeholder="First Name"
                        Text="{Binding GuestUserObject.firstname}"/>
@@ -23,7 +23,7 @@
                 <Entry x:Name="Telephone" Placeholder="Telephone"
                        Text="{Binding GuestUserObject.telephone}"/>
 
-                <Label TextColor="#77d065" FontSize = "20" Text="Your Address" />
+                <Label TextColor="#06A2CB" FontSize = "20" Text="Your Address" />
 
 
                  <Entry x:Name="Address" Placeholder="Address"
@@ -39,7 +39,7 @@
                        Text="{Binding GuestUserObject.State}" />
                  
             <Button x:Name="nextBtn" Text="Next" TextColor="White"
-                BackgroundColor="#77D065"
+                BackgroundColor="#06A2CB"
                 Command="{Binding NextBtnCommand}" VerticalOptions="End"/>
 
             </StackLayout>

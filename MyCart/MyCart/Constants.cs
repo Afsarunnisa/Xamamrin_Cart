@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 namespace MyCart
 {
     public class Constants
@@ -22,6 +22,7 @@ namespace MyCart
 		public static string AddGuestShippingUrl = "http://oc.qa.nbos.in/api/rest/guestshipping";
 
 
+		public static string WishListUrl = "http://oc.qa.nbos.in/api/rest/wishlist";
 
 
 		public static string ShippingMethodsUrl = "http://oc.qa.nbos.in/api/rest/shippingmethods";
@@ -33,8 +34,12 @@ namespace MyCart
 		public static string OcConnectUrl = "http://oc.qa.nbos.in/index.php?route=rest/nbos/connect";
 
         public static string PostPaymentAddress = "http://oc.qa.nbos.in/api/rest/paymentaddress";
-		
 
+
+        public static string baseColor = "#6599FF";
+//#77D065
+
+     //   06A2CB
 
 		public Constants()
         {

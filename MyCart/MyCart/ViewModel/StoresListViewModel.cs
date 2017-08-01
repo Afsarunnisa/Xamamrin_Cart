@@ -45,9 +45,7 @@ namespace MyCart.ViewModel
 
 				foreach (var store in data)
 				{
-                    Stores.Add(store);
-					Stores.Add(store);
-					
+                    Stores.Add(store);					
 				}
 
 			}

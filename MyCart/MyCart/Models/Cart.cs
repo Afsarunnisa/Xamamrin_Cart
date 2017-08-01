@@ -28,7 +28,7 @@ namespace MyCart.Models
 		public CartProducts[] products { get; set; }
 
 		[JsonProperty("vouchers")]
-		public CartVouchers[] vouchers { get; set; }
+		public ProductVouchers[] vouchers { get; set; }
 
 		[JsonProperty("coupon_status")]
 		public string coupon_status { get; set; }
@@ -50,7 +50,7 @@ namespace MyCart.Models
 		public string reward { get; set; }
 
 		[JsonProperty("totals")]
-		public CartTotal[] totals { get; set; }
+		public ProductTotal[] totals { get; set; }
 
 
 		[JsonProperty("total")]
@@ -60,8 +60,10 @@ namespace MyCart.Models
 		public string total_product_count { get; set; }
 
 
-		
-		
+
+		[JsonProperty("total_price")]
+		public string total_price { get; set; }
+
 	}
 
     public class CartProducts{
@@ -84,7 +86,7 @@ namespace MyCart.Models
 		public string weight { get; set; }
 
 		[JsonProperty("option")]
-		public CartOption[] option { get; set; }
+		public ProductOption[] option { get; set; }
 
 
 		[JsonProperty("quantity")]
@@ -107,7 +109,7 @@ namespace MyCart.Models
       
 	}
 
-    public class CartOption{
+    public class ProductOption{
 
 		[JsonProperty("name")]
 		public string name { get; set; }
@@ -116,14 +118,14 @@ namespace MyCart.Models
 		public string value { get; set; }
     }
 
-	public class CartVouchers
+	public class ProductVouchers
 	{
         [JsonProperty("name")]
 		public string name { get; set; }
 	}
 
 
-    public class CartTotal{
+    public class ProductTotal{
 		[JsonProperty("title")]
 		public string title { get; set; }
 

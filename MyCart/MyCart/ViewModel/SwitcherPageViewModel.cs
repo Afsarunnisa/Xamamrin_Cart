@@ -22,16 +22,7 @@ namespace MyCart.ViewModel
     {
 
 
-		private ObservableCollection<Store> storesList;
-		public ObservableCollection<Store> StoresList
-		{
-			get { return storesList; }
-			set
-			{
-				storesList = value;
-				OnPropertyChanged("StoresList");
-			}
-		}
+
 
         private ObservableCollection<FeaturedProducts> featuredProductsList;
 		public ObservableCollection<FeaturedProducts> FeaturedProductsList
@@ -51,7 +42,6 @@ namespace MyCart.ViewModel
 
             this.GetOCToken();
 
-			StoresList = new ObservableCollection<Store>();
             FeaturedProductsList = new ObservableCollection<FeaturedProducts>();
 
 
@@ -67,11 +57,33 @@ namespace MyCart.ViewModel
 
 			try
 			{
-                Boolean isTokenRecived = await App.RestApiManager.GetToken();
-                if(isTokenRecived == true){
-					this.GetStores();
-                    this.GetFeatureProducts();
-				}
+
+				if (App.Current.Properties.ContainsKey("AccessToken"))
+				{
+					var token = App.Current.Properties["AccessToken"] as string;
+                    if(token != ""){
+						this.GetFeatureProducts();
+
+                    }else{
+						Boolean isTokenRecived = await App.RestApiManager.GetToken();
+						if (isTokenRecived == true)
+						{
+							this.GetFeatureProducts();
+						}
+                    }
+                }else{
+
+					Boolean isTokenRecived = await App.RestApiManager.GetToken();
+					if (isTokenRecived == true)
+					{
+						this.GetFeatureProducts();
+					}
+                }
+
+    //            Boolean isTokenRecived = await App.RestApiManager.GetToken();
+    //            if(isTokenRecived == true){
+    //                this.GetFeatureProducts();
+				//}
 		
 			}
 			catch (Exception e)
@@ -88,6 +100,9 @@ namespace MyCart.ViewModel
                 List<FeaturedProducts> data = await App.RestApiManager.GetFeaturedProducts();
 
                 foreach (var product in data){
+
+                    Debug.WriteLine("product {0}", product.name);
+
                     FeaturedProductsList.Add(product);
                 }
 
@@ -98,28 +113,6 @@ namespace MyCart.ViewModel
 				Debug.WriteLine(e.Message);
 			}
         }
-
-
-		private async void GetStores()
-		{
-			try
-			{
-
-
-				List<Store> data = await App.RestApiManager.GetStores();
-
-				foreach (var store in data)
-				{
-					StoresList.Add(store);
-					StoresList.Add(store);
-				}
-			}
-			catch (Exception e)
-			{
-				Debug.WriteLine(e.Message);
-			}
-
-		}
 
 
 		IEnumerable<HomeViewModel> _pages;

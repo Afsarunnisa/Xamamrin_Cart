@@ -38,14 +38,14 @@ namespace MyCart.Views
 			//menuList.Add(page4);
 			menuList.Add(page5);
 			menuList.Add(page6);
-			menuList.Add(page7);
+			//menuList.Add(page7);
 			menuList.Add(page8);
 
 			menuListView.ItemsSource = menuList;
 
 
             Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(DashboardPage))){
-                BarBackgroundColor = Color.FromHex("#77D065"),
+                BarBackgroundColor = Color.FromHex("#06A2CB"),
                 BarTextColor = Color.White,
             };
 
@@ -55,6 +55,8 @@ namespace MyCart.Views
 		private void OnMenuItemSelected(object sender, SelectedItemChangedEventArgs e)
 		{
 
+			if (e.SelectedItem == null) return; // don't do anything if we just de-selected the row
+
 			var item = (MenuItemModel)e.SelectedItem;
 			Type page = item.TargetType;
 
@@ -63,21 +65,23 @@ namespace MyCart.Views
 				Page displayPage = (Page)Activator.CreateInstance(page, "0", "0");
 				Detail = new NavigationPage(displayPage)
 				{
-					BarBackgroundColor = Color.FromHex("#77D065"),
+					BarBackgroundColor = Color.FromHex("#06A2CB"),
 					BarTextColor = Color.White,
 				};
             }else{
 				Detail = new NavigationPage((Page)Activator.CreateInstance(page))
 				{
-					BarBackgroundColor = Color.FromHex("#77D065"),
+					BarBackgroundColor = Color.FromHex("#06A2CB"),
 					BarTextColor = Color.White,
 				};
 			}
 
- 
-
 			IsPresented = false;
-		}
 
+			//((ListView)sender).SelectedItem = null;
+
+			((ListView)sender).SelectedItem = null; // de-select the row
+
+		}
 	}
 }

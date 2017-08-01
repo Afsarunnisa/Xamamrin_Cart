@@ -14,6 +14,13 @@ namespace MyCart.Views
             InitializeComponent();
             BindingContext = new PaymentMethodsViewModel();
 
+
+			MessagingCenter.Subscribe<PaymentMethodsViewModel, string[]>(this, "DisplayAlert", (sender, values) =>
+			{
+				DisplayAlert(values[0], values[1], "Ok");
+
+			});
         }
+
     }
 }

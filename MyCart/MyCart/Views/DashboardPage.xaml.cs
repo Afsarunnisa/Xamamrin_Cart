@@ -1,20 +1,29 @@
 ﻿using System;
-using System.Collections.Generic;
 
 using Xamarin.Forms;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using XLabs.Forms.Mvvm;
+
 
 using MyCart.Controls;
 using MyCart.ViewModel;
+using MyCart.Models;
 
 namespace MyCart.Views
 {
     public partial class DashboardPage : ContentPage
     {
 
-		View _tabs;
+		//View _tabs;
 		RelativeLayout relativeLayout;
 		CarouselLayout.IndicatorStyleEnum _indicatorStyle;
 		SwitcherPageViewModel viewModel;
+
+        Grid innerGrid;
+        Image image;
 
         public DashboardPage()
         {
@@ -34,9 +43,7 @@ namespace MyCart.Views
 			var pagesCarousel = CreatePagesCarousel();
 			var dots = CreatePagerIndicatorContainer();
 
-            pagesCarousel.BackgroundColor = Color.Bisque;
-
-            //var listCarousel = CreateListViewCarousel();
+            pagesCarousel.BackgroundColor = Color.White;
 
 
 			switch (pagesCarousel.IndicatorStyle)
@@ -57,7 +64,7 @@ namespace MyCart.Views
 						}),
 						Constraint.RelativeToParent((parent) =>
 						{
-							return parent.Height / 3;
+							return 180;
 						})
 					);
 
@@ -79,13 +86,12 @@ namespace MyCart.Views
 
         
 
-			var storesLabel = new Label { FontAttributes = FontAttributes.Bold };
-            storesLabel.Text = "STORES";
-			storesLabel.HorizontalOptions = LayoutOptions.CenterAndExpand;
-			storesLabel.VerticalOptions = LayoutOptions.CenterAndExpand;
-            storesLabel.BackgroundColor = Color.Aqua;
+			var FeaturesLabel = new Label { FontAttributes = FontAttributes.Bold };
+            FeaturesLabel.Text = "Featured Products";
+			FeaturesLabel.HorizontalOptions = LayoutOptions.CenterAndExpand;
+			FeaturesLabel.VerticalOptions = LayoutOptions.CenterAndExpand;
 
-			relativeLayout.Children.Add(storesLabel,
+			relativeLayout.Children.Add(FeaturesLabel,
                         Constraint.RelativeToParent((parent) =>
 						{
 							return parent.X;
@@ -93,81 +99,11 @@ namespace MyCart.Views
                         Constraint.RelativeToView(pagesCarousel,
 							(parent, sibling) =>
 							{
-								return sibling.Height;
+								return 180 ;
 							}),
 						Constraint.RelativeToParent(parent => parent.Width),
 						Constraint.Constant(36)
 					);
-
-
-			var storesDataTemplate = new DataTemplate(() =>
-			{
-
-                var grid = new Grid();
-                grid.BackgroundColor = Color.Blue;
-                grid.Padding = 20;
-
-				grid.HorizontalOptions = LayoutOptions.FillAndExpand;
-
-                var nameLabel = new Label { FontAttributes = FontAttributes.Bold };
-                nameLabel.HorizontalOptions = LayoutOptions.CenterAndExpand;
-                nameLabel.VerticalOptions = LayoutOptions.CenterAndExpand;
-				nameLabel.SetBinding(Label.TextProperty, "name");
-                nameLabel.Rotation = 90;
-
-
-				grid.Children.Add(nameLabel);
-				return new ViewCell { View = grid };
-			});
-
-
-	            var listView = new ListView { ItemTemplate = storesDataTemplate, RowHeight=160 };
-	            listView.ItemsSource = viewModel.StoresList;
-	            listView.SeparatorColor = Color.Transparent;
-	            listView.Rotation = 270;
-                listView.BackgroundColor = Color.FromHex("#77D065");
-			                //listView.Opacity = 0.7;
-
-			      	relativeLayout.Children.Add(listView,
-                       // Constraint.Constant(96),
-                        Constraint.RelativeToParent((parent) =>
-                        {
-                            return (parent.Height / 3) - 90 - 50;
-                        }),
-
-                        Constraint.RelativeToParent((parent) =>
-						{
-							return (parent.Height / 3) - 36;
-						}),
-                                                
-                       	Constraint.RelativeToParent(parent => ((parent.Height / 3) - 50) ),
-                        Constraint.RelativeToParent((parent) =>
-                        {
-                            return parent.Width;
-                        })
-                    );
-
-
-			var featuredLabel = new Label { FontAttributes = FontAttributes.Bold };
-			featuredLabel.Text = "Featured Products";
-			featuredLabel.HorizontalOptions = LayoutOptions.CenterAndExpand;
-			featuredLabel.VerticalOptions = LayoutOptions.CenterAndExpand;
-
-			relativeLayout.Children.Add(featuredLabel,
-                            Constraint.RelativeToParent((parent) =>
-                            {
-                                return parent.X;
-                            }),	
-                            Constraint.RelativeToView(listView,
-							(parent, sibling) =>
-							{
-								return sibling.Height + 32 + 20 ;
-							}),
-						Constraint.RelativeToParent(parent => parent.Width),
-						Constraint.Constant(36)
-					);
-
-
 
 			var featuredListDataTemplate = new DataTemplate(() =>
 			{
@@ -175,29 +111,51 @@ namespace MyCart.Views
                 return new ViewCell { View = contentView };
 			});
 
-            var featuredListView = new ListView { ItemTemplate = featuredListDataTemplate, RowHeight = 160 };
+            var featuredListView = new ListView { ItemTemplate = featuredListDataTemplate, RowHeight = 100  };
 			featuredListView.ItemsSource = viewModel.FeaturedProductsList;
 			featuredListView.SeparatorColor = Color.Transparent;
-			featuredListView.Rotation = 270;
-            featuredListView.BackgroundColor = Color.Gold;
+            featuredListView.BackgroundColor = Color.FromHex("#cccccc");
 
+			featuredListView.ItemSelected += (object sender, SelectedItemChangedEventArgs e) =>
+			{
+
+				if (e.SelectedItem == null) return; // don't do anything if we just de-selected the row
+
+
+
+				var item = (FeaturedProducts)e.SelectedItem;
+                Products aproduct = new Products();
+                aproduct.name = item.name;
+                aproduct.id = item.product_id;
+                aproduct.price = item.price;
+                aproduct.description = item.description;
+                aproduct.image = item.thumb;
+                aproduct.price_formated = item.price_formated;
+
+
+				Navigation.PushAsync(new ProductDetailsPage(aproduct));
+
+				((ListView)sender).SelectedItem = null; // de-select the row
+
+
+			};
 
 			relativeLayout.Children.Add(featuredListView,
                         Constraint.RelativeToParent((parent) =>
 						{
-							return (parent.Height / 3) - 90;
+                          return parent.X;
 						}),
 
-						  Constraint.RelativeToView(listView,
+                            Constraint.RelativeToView(pagesCarousel,
 							(parent, sibling) =>
 							{
-								return sibling.Height ;
+								return sibling.Height + 36;
 							}),
 
-						Constraint.RelativeToParent(parent => (parent.Height / 3) ),
+                        Constraint.RelativeToParent(parent => (parent.Width) ),
 						Constraint.RelativeToParent((parent) =>
 						{
-							return parent.Width;
+                            return parent.Height;
 						})
 					);
 
@@ -206,10 +164,89 @@ namespace MyCart.Views
 			//{
 			//	Content = relativeLayout
 			//};
-			//Content = scroll;
-            
-            Content = relativeLayout;
+
+
+            Grid grid = new Grid();
+			grid.Children.Add(relativeLayout);
+
+			innerGrid = new Grid();
+            innerGrid.BackgroundColor = Color.White;
+
+            image = new Image();
+            image.HorizontalOptions = LayoutOptions.Center;
+            image.VerticalOptions = LayoutOptions.Center;
+            image.Source = "logo.png";
+            image.TranslationY = 0;
+
+			innerGrid.Children.Add(image);
+
+			grid.Children.Add(innerGrid);
+
+			ScrollView scroll = new ScrollView
+			{
+				Content = grid
+			};
+
+   //         NavigationPage.SetHasNavigationBar(this, false);
+			//Content = grid;
+
+
+			string isSplash = "";
+
+			if (App.Current.Properties.ContainsKey("IsSplash"))
+			{
+				isSplash = App.Current.Properties["IsSplash"] as string;
+			}
+
+            if(isSplash == "false"){
+				NavigationPage.SetHasNavigationBar(this, false);
+				Content = grid;
+				App.Current.Properties["IsSplash"] = "true";
+            }else{
+                Content = relativeLayout;
+
+			}
+
+
+            //Content = relativeLayout;
         }
+
+        protected override async void OnAppearing(){
+			base.OnAppearing();
+
+
+
+			
+
+			// Waiting some time
+			//await Task.Delay(2000);
+
+			Task.Run(
+			   async () =>
+			   {
+				   this.IsBusy = true;
+				   await Task.Delay(2000);
+				   Device.BeginInvokeOnMainThread(() => this.Load());
+				   this.IsBusy = false;
+			   });
+
+
+			// Start animation
+			await Task.WhenAll(
+				innerGrid.FadeTo(0, 2000),
+				image.ScaleTo(10, 2000)
+            );
+
+
+		}
+
+        void Load(){
+            NavigationPage.SetHasNavigationBar(this, true);
+
+		}
+
+
+
 
 		CarouselLayout CreatePagesCarousel()
 		{
@@ -280,4 +317,5 @@ namespace MyCart.Views
 		}
 
     }
+
 }

@@ -11,7 +11,7 @@
 namespace MyCart.Views {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/Views/DashboardPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/apple/Desktop/Xamarin/Git/MyCart_SPlash/MyCart/MyCart/Views/DashboardPage.xaml")]
     public partial class DashboardPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

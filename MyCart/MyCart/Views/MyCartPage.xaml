@@ -6,7 +6,7 @@
     
 	<ContentPage.Content>
 
-    <StackLayout Spacing="10">
+    <StackLayout Spacing="20">
 
          <ListView ItemsSource="{Binding CartItems}"
                           CachingStrategy="RecycleElement"
@@ -59,11 +59,17 @@
 
         </ListView>
 
-        <Button Text="Proceed To Checkout" BorderRadius="0" TextColor="White" HeightRequest = "50" BackgroundColor = "#77d065" VerticalOptions="End" Clicked="Checkout_Cart_Clicked"/>
+        <StackLayout VerticalOptions="End" >
 
+            <Label Text="{Binding TotalItems}" Margin="16" FontAttributes="Bold" HeightRequest = "30" HorizontalOptions="EndAndExpand" >
+
+            </Label>     
+        <Button Text="Proceed TO Checkout" BorderRadius="0" TextColor="White" HeightRequest = "50" BackgroundColor = "#06A2CB" VerticalOptions="End" Clicked="Checkout_Cart_Clicked"/>
+                </StackLayout>
+
+                
         </StackLayout>
 
-        
 	</ContentPage.Content>
     
 </ContentPage>

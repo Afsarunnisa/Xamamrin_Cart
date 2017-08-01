@@ -42,6 +42,14 @@
                            VerticalTextAlignment="Center"
                            FontSize="16"
                            Text="{Binding name, Mode = TwoWay}">
+
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <OnPlatform.iOS>SourceSansPro-Regular</OnPlatform.iOS>
+                            <OnPlatform.Android></OnPlatform.Android>
+                            <OnPlatform.WinPhone></OnPlatform.WinPhone>
+                        </OnPlatform>
+                    </Label.FontFamily>
                       <Label.LineBreakMode>
                           <OnPlatform x:TypeArguments="LineBreakMode"
                                       Android="NoWrap" iOS="TailTruncation"/>
@@ -59,7 +67,7 @@
                        </Grid.ColumnDefinitions>
                        <Label Grid.Row="0"
                               Grid.Column="0"
-                              Text="{Binding price}"/>
+                              Text="{Binding price_formated}"/>
                        <Label Grid.Row="0"
                               Grid.Column="1"
                               Text="{Binding Owner, Mode = TwoWay}"/>

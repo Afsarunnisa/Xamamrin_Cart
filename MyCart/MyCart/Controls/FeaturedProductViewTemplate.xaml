@@ -4,7 +4,8 @@
             x:Class="MyCart.Controls.FeaturedProductViewTemplate">
 	<ContentView.Content>
 
-          <Frame IsClippedToBounds="True"
+
+         <Frame IsClippedToBounds="True"
               HasShadow="True"
               BackgroundColor="White">
 
@@ -19,42 +20,23 @@
                          Android="6,6,6,0" iOS="6,6,6,0"/>
             </Frame.Margin>
 
-            <StackLayout Padding="10" Orientation="Horizontal"  >
-                <Image Source="{Binding thumb}" HeightRequest="100" WidthRequest="100" BackgroundColor="Olive"
-                        VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Rotation="90"/>
-
-                <Label FontAttributes="Bold"
-                           BackgroundColor="Aqua"
-                           FontSize="16" Rotation = "90"
-                           Text="{Binding name, Mode = TwoWay}">
-                <Label.LineBreakMode>
-                    <OnPlatform x:TypeArguments="LineBreakMode" 
-                                      Android="NoWrap" iOS="TailTruncation"/>
-                </Label.LineBreakMode>
-                </Label>
-
-                  <Label Text="{Binding price}" BackgroundColor="Navy" Rotation="90" />
-
-            </StackLayout>
-            
-
-           <!-- <StackLayout Orientation="Horizontal" >
+            <StackLayout Orientation="Horizontal" >
 
             <StackLayout Orientation="Horizontal" >
 
-                    <Image Source="{Binding image}" HeightRequest="60" WidthRequest="60"
+                    <Image Source="{Binding thumb}" HeightRequest="60" WidthRequest="60"
                                         VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand"/>
                 
                    <BoxView Color="{Binding AlertColor}" WidthRequest="4"/>
                      <Grid VerticalOptions="CenterAndExpand"
                      HorizontalOptions="FillAndExpand"
                      Padding="0" 
-                     BackgroundColor="Transparent">
+                     >
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
-                        <RowDefinition Height="Auto"/>
                         <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
+<!--                        <RowDefinition Height="*"/>
+-->                    </Grid.RowDefinitions>
                     <Label FontAttributes="Bold"
                            Grid.Row="0"
                            HorizontalTextAlignment="Start"
@@ -65,11 +47,21 @@
                           <OnPlatform x:TypeArguments="LineBreakMode"
                                       Android="NoWrap" iOS="TailTruncation"/>
                       </Label.LineBreakMode>
+
+                             <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <OnPlatform.iOS>SourceSansPro-Regular</OnPlatform.iOS>
+                            <OnPlatform.Android></OnPlatform.Android>
+                            <OnPlatform.WinPhone></OnPlatform.WinPhone>
+                        </OnPlatform>
+                    </Label.FontFamily>
+
+                            
                       </Label>
-                 <BoxView Grid.Row="1" Color="Gray"
+                <!-- <BoxView Grid.Row="1" Color="Gray"
                           HorizontalOptions="FillAndExpand"
                           HeightRequest="1"/>-->
-               <!--  <Grid Grid.Row="1"
+                 <Grid Grid.Row="1"
                        BackgroundColor="Transparent"
                        Padding="4">
                        <Grid.ColumnDefinitions>
@@ -78,26 +70,26 @@
                        </Grid.ColumnDefinitions>
                        <Label Grid.Row="0"
                               Grid.Column="0"
-                              Text="{Binding price}"/>
-                       <Label Grid.Row="0"
-                              Grid.Column="1"
-                              Text="{Binding Owner, Mode = TwoWay}"/>
+                              Text="{Binding price_formated}">
+
+                                   <Label.FontFamily>
+                                    <OnPlatform x:TypeArguments="x:String">
+                                        <OnPlatform.iOS>SourceSansPro-Regular</OnPlatform.iOS>
+                                        <OnPlatform.Android></OnPlatform.Android>
+                                        <OnPlatform.WinPhone></OnPlatform.WinPhone>
+                                    </OnPlatform>
+                                </Label.FontFamily>
+             
+                            </Label>
+                    
                   </Grid>
-             </Grid>-->
+             </Grid>
 
 
                     
-<!--           </StackLayout>
--->
-<!--                <StackLayout BackgroundColor="Olive" HorizontalOptions="EndAndExpand">
--->
-                
-   <!--             <Button x:Name="wishBtn" Text="Fav" CommandParameter="{Binding name}"
-                                    HorizontalOptions="EndAndExpand" 
-                                    WidthRequest="50" HeightRequest="50" Image="Favorite" />-->
-<!--                </StackLayout>
--->
-<!--            </StackLayout>-->
+           </StackLayout>
+
+            </StackLayout>
 
         </Frame>
         

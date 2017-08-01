@@ -11,7 +11,7 @@
 namespace MyCart {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/apple/Desktop/Xamarin/Git/Xamamrin_Cart/MyCart/MyCart/App.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/apple/Desktop/Xamarin/Git/MyCart_SPlash/MyCart/MyCart/App.xaml")]
     public partial class App : global::Xamarin.Forms.Application {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

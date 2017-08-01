@@ -21,49 +21,6 @@
                         <ViewCell>
                             <view:CardViewTemplate/>
 
-                            
-                          <!--  <StackLayout Margin="8" Orientation="Horizontal" >
-
-
-                                <StackLayout>
-                                    <Image Source="{Binding image}" HeightRequest="60" WidthRequest="60"
-                                        VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
-                                </StackLayout>
-
-                                <StackLayout Margin="8" HorizontalOptions="FillAndExpand" >
-
-                                    <Label Text="{Binding name}"
-                                                   FontAttributes="Bold" LineBreakMode="TailTruncation"/>
-
-                                    <StackLayout Orientation="Horizontal" >
-
-                                       <StackLayout >
-
-                                            <StackLayout Orientation="Horizontal" >
-                                                            
-                                                <Label Text="₹"  />
-                                                <Label Text="{Binding price}"  />
-                                                                                                
-                                            </StackLayout>
-                                            
-                                            <StackLayout Orientation="Horizontal" >
-                                                            
-                                                <Label Text="InStock:"  />
-                                                <Label Text="{Binding quantity}"  />
-                                                                                                
-                                            </StackLayout>
-                                        </StackLayout>  
-
-
-                                        <Button x:Name="wishBtn" Text="Fav" CommandParameter="{Binding name}"
-                                                Clicked="Wish_Cart_Clicked" HorizontalOptions="EndAndExpand" 
-                                                WidthRequest="50" HeightRequest="50" Image="Favorite" />
-
-                                  </StackLayout>  
-
-                             </StackLayout>
-
-                        </StackLayout>-->
                         
                         </ViewCell>
 

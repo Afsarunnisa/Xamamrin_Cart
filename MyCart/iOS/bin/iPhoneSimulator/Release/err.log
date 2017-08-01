@@ -1,103 +1,73 @@
-objc[3534]: Class VCWeakObjectHolder is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/PrivateFrameworks/GameKitServices.framework/Frameworks/ViceroyTrace.framework/ViceroyTrace (0x1281efca8) and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/PrivateFrameworks/GameKitServices.framework/Frameworks/AVConference.framework/AVConference (0x128121cd0). One of the two will be used. Which one is undefined.
-objc[3534]: Class PLBuildVersion is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/PrivateFrameworks/AssetsLibraryServices.framework/AssetsLibraryServices (0x125e74cc0) and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/PrivateFrameworks/PhotoLibraryServices.framework/PhotoLibraryServices (0x125c8b6f0). One of the two will be used. Which one is undefined.
-2017-07-28 15:52:40.754 MyCart.iOS[3534:317155] 
+objc[5937]: Class VCWeakObjectHolder is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/PrivateFrameworks/GameKitServices.framework/Frameworks/ViceroyTrace.framework/ViceroyTrace (0x122048ca8) and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/PrivateFrameworks/GameKitServices.framework/Frameworks/AVConference.framework/AVConference (0x121f7acd0). One of the two will be used. Which one is undefined.
+objc[5937]: Class PLBuildVersion is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/PrivateFrameworks/AssetsLibraryServices.framework/AssetsLibraryServices (0x11fccdcc0) and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/PrivateFrameworks/PhotoLibraryServices.framework/PhotoLibraryServices (0x11fae46f0). One of the two will be used. Which one is undefined.
+2017-08-01 17:22:20.249 MyCart.iOS[5937:361993] 
 Unhandled Exception:
-Xamarin.Forms.Xaml.XamlParseException: Position 27:26. Type HtmlLabel not found in xmlns http://xamarin.com/schemas/2014/forms
-  at Xamarin.Forms.Xaml.CreateValuesVisitor.Visit (Xamarin.Forms.Xaml.ElementNode node, Xamarin.Forms.Xaml.INode parentNode) [0x00040] in <e5278a80546642fb9a62f659d2b92209>:0 
-  at Xamarin.Forms.Xaml.ElementNode.Accept (Xamarin.Forms.Xaml.IXamlNodeVisitor visitor, Xamarin.Forms.Xaml.INode parentNode) [0x000b1] in <e5278a80546642fb9a62f659d2b92209>:0 
-  at Xamarin.Forms.Xaml.ElementNode.Accept (Xamarin.Forms.Xaml.IXamlNodeVisitor visitor, Xamarin.Forms.Xaml.INode parentNode) [0x00089] in <e5278a80546642fb9a62f659d2b92209>:0 
-  at Xamarin.Forms.Xaml.ElementNode.Accept (Xamarin.Forms.Xaml.IXamlNodeVisitor visitor, Xamarin.Forms.Xaml.INode parentNode) [0x00089] in <e5278a80546642fb9a62f659d2b92209>:0 
-  at Xamarin.Forms.Xaml.ElementNode.Accept (Xamarin.Forms.Xaml.IXamlNodeVisitor visitor, Xamarin.Forms.Xaml.INode parentNode) [0x00089] in <e5278a80546642fb9a62f659d2b92209>:0 
-  at Xamarin.Forms.Xaml.RootNode.Accept (Xamarin.Forms.Xaml.IXamlNodeVisitor visitor, Xamarin.Forms.Xaml.INode parentNode) [0x00054] in <e5278a80546642fb9a62f659d2b92209>:0 
-  at Xamarin.Forms.Xaml.XamlLoader.Visit (Xamarin.Forms.Xaml.RootNode rootnode, Xamarin.Forms.Xaml.HydratationContext visitorContext) [0x0005a] in <e5278a80546642fb9a62f659d2b92209>:0 
-  at Xamarin.Forms.Xaml.XamlLoader.Load (System.Object view, System.String xaml) [0x0005d] in <e5278a80546642fb9a62f659d2b92209>:0 
-  at Xamarin.Forms.Xaml.XamlLoader.Load (System.Object view, System.Type callingType) [0x0002f] in <e5278a80546642fb9a62f659d2b92209>:0 
-  at Xamarin.Forms.Xaml.Extensions.LoadFromXaml[TXaml] (TXaml view, System.Type callingType) [0x00000] in <e5278a80546642fb9a62f659d2b92209>:0 
-  at MyCart.Views.ProductDetailsPage.InitializeComponent () [0x00000] in <7d648ec8cee4418cbdd37dbc1ac3056d>:0 
-  at MyCart.Views.ProductDetailsPage..ctor (MyCart.Models.Products product) [0x00006] in <7d648ec8cee4418cbdd37dbc1ac3056d>:0 
-  at MyCart.Views.AllProductsListPage.OnProductSelected (System.Object sender, Xamarin.Forms.SelectedItemChangedEventArgs e) [0x00012] in <7d648ec8cee4418cbdd37dbc1ac3056d>:0 
-  at (wrapper delegate-invoke) System.EventHandler`1[Xamarin.Forms.SelectedItemChangedEventArgs]:invoke_void_object_TEventArgs (object,Xamarin.Forms.SelectedItemChangedEventArgs)
-  at Xamarin.Forms.ListView.OnSelectedItemChanged (Xamarin.Forms.BindableObject bindable, System.Object oldValue, System.Object newValue) [0x0001c] in <051840eae40a4636884ee6bc6a0d140a>:0 
-  at Xamarin.Forms.BindableObject.SetValueActual (Xamarin.Forms.BindableProperty property, Xamarin.Forms.BindableObject+BindablePropertyContext context, System.Object value, System.Boolean currentlyApplying, Xamarin.Forms.BindableObject+SetValueFlags attributes, System.Boolean silent) [0x0010e] in <051840eae40a4636884ee6bc6a0d140a>:0 
-  at Xamarin.Forms.BindableObject.SetValueCore (Xamarin.Forms.BindableProperty property, System.Object value, Xamarin.Forms.BindableObject+SetValueFlags attributes, Xamarin.Forms.BindableObject+SetValuePrivateFlags privateAttributes) [0x0015b] in <051840eae40a4636884ee6bc6a0d140a>:0 
-  at Xamarin.Forms.BindableObject.SetValueCore (Xamarin.Forms.BindableProperty property, System.Object value, Xamarin.Forms.BindableObject+SetValueFlags attributes) [0x00000] in <051840eae40a4636884ee6bc6a0d140a>:0 
-  at Xamarin.Forms.ListView.NotifyRowTapped (System.Int32 groupIndex, System.Int32 inGroupIndex, Xamarin.Forms.Cell cell) [0x0004c] in <051840eae40a4636884ee6bc6a0d140a>:0 
-  at Xamarin.Forms.ListView.Xamarin.Forms.IListViewController.NotifyRowTapped (System.Int32 index, System.Int32 inGroupIndex, Xamarin.Forms.Cell cell) [0x00000] in <051840eae40a4636884ee6bc6a0d140a>:0 
-  at Xamarin.Forms.Platform.iOS.ListViewRenderer+ListViewDataSource.RowSelected (UIKit.UITableView tableView, Foundation.NSIndexPath indexPath) [0x00059] in <4cf9e9e173a04ea3aa841c775e6a23d7>:0 
-  at Xamarin.Forms.Platform.iOS.ContextActionsCell+SelectGestureRecognizer.Tapped (UIKit.UIGestureRecognizer recognizer) [0x00044] in <4cf9e9e173a04ea3aa841c775e6a23d7>:0 
-  at UIKit.UITapGestureRecognizer+Callback.Activated (UIKit.UITapGestureRecognizer sender) [0x00000] in <58a9bd8a3cbb4d0092bc0a767ff66c0f>:0 
+System.NullReferenceException: Object reference not set to an instance of an object
+  at MyCart.ViewModel.PaymentMethodsViewModel+<ExecuteOnCheckOutClick>d__16.MoveNext () [0x00084] in <9b3f7b5300da40178b5ae3e937c132b1>:0 
+--- End of stack trace from previous location where exception was thrown ---
+  at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw () [0x0000c] in <2f4074c3120b4d80802e10af84b67d41>:0 
+  at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess (System.Threading.Tasks.Task task) [0x0003e] in <2f4074c3120b4d80802e10af84b67d41>:0 
+  at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification (System.Threading.Tasks.Task task) [0x00028] in <2f4074c3120b4d80802e10af84b67d41>:0 
+  at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd (System.Threading.Tasks.Task task) [0x00008] in <2f4074c3120b4d80802e10af84b67d41>:0 
+  at System.Runtime.CompilerServices.TaskAwaiter.GetResult () [0x00000] in <2f4074c3120b4d80802e10af84b67d41>:0 
+  at MyCart.ViewModel.PaymentMethodsViewModel+<<get_CheckOutBtnCommand>b__2_0>d.MoveNext () [0x00062] in <9b3f7b5300da40178b5ae3e937c132b1>:0 
+--- End of stack trace from previous location where exception was thrown ---
+  at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw () [0x0000c] in <2f4074c3120b4d80802e10af84b67d41>:0 
+  at System.Runtime.CompilerServices.AsyncMethodBuilderCore+<>c.<ThrowAsync>b__6_0 (System.Object state) [0x00000] in <2f4074c3120b4d80802e10af84b67d41>:0 
+  at UIKit.UIKitSynchronizationContext+<Post>c__AnonStorey0.<>m__0 () [0x00000] in <58a9bd8a3cbb4d0092bc0a767ff66c0f>:0 
+  at Foundation.NSAsyncActionDispatcher.Apply () [0x00000] in <58a9bd8a3cbb4d0092bc0a767ff66c0f>:0 
 --- End of stack trace from previous location where exception was thrown ---
   at (wrapper managed-to-native) UIKit.UIApplication:UIApplicationMain (int,string[],intptr,intptr)
   at UIKit.UIApplication.Main (System.String[] args, System.IntPtr principal, System.IntPtr delegate) [0x00005] in <58a9bd8a3cbb4d0092bc0a767ff66c0f>:0 
   at UIKit.UIApplication.Main (System.String[] args, System.String principalClassName, System.String delegateClassName) [0x00038] in <58a9bd8a3cbb4d0092bc0a767ff66c0f>:0 
-  at MyCart.iOS.Application.Main (System.String[] args) [0x00000] in <dab30c17c17940a39b8d2ac2c9714730>:0 
-2017-07-28 15:52:40.758 MyCart.iOS[3534:317155] Unhandled managed exception:
-Position 27:26. Type HtmlLabel not found in xmlns http://xamarin.com/schemas/2014/forms (Xamarin.Forms.Xaml.XamlParseException)
-  at Xamarin.Forms.Xaml.CreateValuesVisitor.Visit (Xamarin.Forms.Xaml.ElementNode node, Xamarin.Forms.Xaml.INode parentNode) [0x00040] in <e5278a80546642fb9a62f659d2b92209>:0 
-  at Xamarin.Forms.Xaml.ElementNode.Accept (Xamarin.Forms.Xaml.IXamlNodeVisitor visitor, Xamarin.Forms.Xaml.INode parentNode) [0x000b1] in <e5278a80546642fb9a62f659d2b92209>:0 
-  at Xamarin.Forms.Xaml.ElementNode.Accept (Xamarin.Forms.Xaml.IXamlNodeVisitor visitor, Xamarin.Forms.Xaml.INode parentNode) [0x00089] in <e5278a80546642fb9a62f659d2b92209>:0 
-  at Xamarin.Forms.Xaml.ElementNode.Accept (Xamarin.Forms.Xaml.IXamlNodeVisitor visitor, Xamarin.Forms.Xaml.INode parentNode) [0x00089] in <e5278a80546642fb9a62f659d2b92209>:0 
-  at Xamarin.Forms.Xaml.ElementNode.Accept (Xamarin.Forms.Xaml.IXamlNodeVisitor visitor, Xamarin.Forms.Xaml.INode parentNode) [0x00089] in <e5278a80546642fb9a62f659d2b92209>:0 
-  at Xamarin.Forms.Xaml.RootNode.Accept (Xamarin.Forms.Xaml.IXamlNodeVisitor visitor, Xamarin.Forms.Xaml.INode parentNode) [0x00054] in <e5278a80546642fb9a62f659d2b92209>:0 
-  at Xamarin.Forms.Xaml.XamlLoader.Visit (Xamarin.Forms.Xaml.RootNode rootnode, Xamarin.Forms.Xaml.HydratationContext visitorContext) [0x0005a] in <e5278a80546642fb9a62f659d2b92209>:0 
-  at Xamarin.Forms.Xaml.XamlLoader.Load (System.Object view, System.String xaml) [0x0005d] in <e5278a80546642fb9a62f659d2b92209>:0 
-  at Xamarin.Forms.Xaml.XamlLoader.Load (System.Object view, System.Type callingType) [0x0002f] in <e5278a80546642fb9a62f659d2b92209>:0 
-  at Xamarin.Forms.Xaml.Extensions.LoadFromXaml[TXaml] (TXaml view, System.Type callingType) [0x00000] in <e5278a80546642fb9a62f659d2b92209>:0 
-  at MyCart.Views.ProductDetailsPage.InitializeComponent () [0x00000] in <7d648ec8cee4418cbdd37dbc1ac3056d>:0 
-  at MyCart.Views.ProductDetailsPage..ctor (MyCart.Models.Products product) [0x00006] in <7d648ec8cee4418cbdd37dbc1ac3056d>:0 
-  at MyCart.Views.AllProductsListPage.OnProductSelected (System.Object sender, Xamarin.Forms.SelectedItemChangedEventArgs e) [0x00012] in <7d648ec8cee4418cbdd37dbc1ac3056d>:0 
-  at (wrapper delegate-invoke) System.EventHandler`1[Xamarin.Forms.SelectedItemChangedEventArgs]:invoke_void_object_TEventArgs (object,Xamarin.Forms.SelectedItemChangedEventArgs)
-  at Xamarin.Forms.ListView.OnSelectedItemChanged (Xamarin.Forms.BindableObject bindable, System.Object oldValue, System.Object newValue) [0x0001c] in <051840eae40a4636884ee6bc6a0d140a>:0 
-  at Xamarin.Forms.BindableObject.SetValueActual (Xamarin.Forms.BindableProperty property, Xamarin.Forms.BindableObject+BindablePropertyContext context, System.Object value, System.Boolean currentlyApplying, Xamarin.Forms.BindableObject+SetValueFlags attributes, System.Boolean silent) [0x0010e] in <051840eae40a4636884ee6bc6a0d140a>:0 
-  at Xamarin.Forms.BindableObject.SetValueCore (Xamarin.Forms.BindableProperty property, System.Object value, Xamarin.Forms.BindableObject+SetValueFlags attributes, Xamarin.Forms.BindableObject+SetValuePrivateFlags privateAttributes) [0x0015b] in <051840eae40a4636884ee6bc6a0d140a>:0 
-  at Xamarin.Forms.BindableObject.SetValueCore (Xamarin.Forms.BindableProperty property, System.Object value, Xamarin.Forms.BindableObject+SetValueFlags attributes) [0x00000] in <051840eae40a4636884ee6bc6a0d140a>:0 
-  at Xamarin.Forms.ListView.NotifyRowTapped (System.Int32 groupIndex, System.Int32 inGroupIndex, Xamarin.Forms.Cell cell) [0x0004c] in <051840eae40a4636884ee6bc6a0d140a>:0 
-  at Xamarin.Forms.ListView.Xamarin.Forms.IListViewController.NotifyRowTapped (System.Int32 index, System.Int32 inGroupIndex, Xamarin.Forms.Cell cell) [0x00000] in <051840eae40a4636884ee6bc6a0d140a>:0 
-  at Xamarin.Forms.Platform.iOS.ListViewRenderer+ListViewDataSource.RowSelected (UIKit.UITableView tableView, Foundation.NSIndexPath indexPath) [0x00059] in <4cf9e9e173a04ea3aa841c775e6a23d7>:0 
-  at Xamarin.Forms.Platform.iOS.ContextActionsCell+SelectGestureRecognizer.Tapped (UIKit.UIGestureRecognizer recognizer) [0x00044] in <4cf9e9e173a04ea3aa841c775e6a23d7>:0 
-  at UIKit.UITapGestureRecognizer+Callback.Activated (UIKit.UITapGestureRecognizer sender) [0x00000] in <58a9bd8a3cbb4d0092bc0a767ff66c0f>:0 
+  at MyCart.iOS.Application.Main (System.String[] args) [0x00000] in <a6102eb2debf4f35b3d6d8b9b3c15459>:0 
+2017-08-01 17:22:20.250 MyCart.iOS[5937:361993] Unhandled managed exception:
+Object reference not set to an instance of an object (System.NullReferenceException)
+  at MyCart.ViewModel.PaymentMethodsViewModel+<ExecuteOnCheckOutClick>d__16.MoveNext () [0x00084] in <9b3f7b5300da40178b5ae3e937c132b1>:0 
+--- End of stack trace from previous location where exception was thrown ---
+  at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw () [0x0000c] in <2f4074c3120b4d80802e10af84b67d41>:0 
+  at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess (System.Threading.Tasks.Task task) [0x0003e] in <2f4074c3120b4d80802e10af84b67d41>:0 
+  at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification (System.Threading.Tasks.Task task) [0x00028] in <2f4074c3120b4d80802e10af84b67d41>:0 
+  at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd (System.Threading.Tasks.Task task) [0x00008] in <2f4074c3120b4d80802e10af84b67d41>:0 
+  at System.Runtime.CompilerServices.TaskAwaiter.GetResult () [0x00000] in <2f4074c3120b4d80802e10af84b67d41>:0 
+  at MyCart.ViewModel.PaymentMethodsViewModel+<<get_CheckOutBtnCommand>b__2_0>d.MoveNext () [0x00062] in <9b3f7b5300da40178b5ae3e937c132b1>:0 
+--- End of stack trace from previous location where exception was thrown ---
+  at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw () [0x0000c] in <2f4074c3120b4d80802e10af84b67d41>:0 
+  at System.Runtime.CompilerServices.AsyncMethodBuilderCore+<>c.<ThrowAsync>b__6_0 (System.Object state) [0x00000] in <2f4074c3120b4d80802e10af84b67d41>:0 
+  at UIKit.UIKitSynchronizationContext+<Post>c__AnonStorey0.<>m__0 () [0x00000] in <58a9bd8a3cbb4d0092bc0a767ff66c0f>:0 
+  at Foundation.NSAsyncActionDispatcher.Apply () [0x00000] in <58a9bd8a3cbb4d0092bc0a767ff66c0f>:0 
 --- End of stack trace from previous location where exception was thrown ---
   at (wrapper managed-to-native) UIKit.UIApplication:UIApplicationMain (int,string[],intptr,intptr)
   at UIKit.UIApplication.Main (System.String[] args, System.IntPtr principal, System.IntPtr delegate) [0x00005] in <58a9bd8a3cbb4d0092bc0a767ff66c0f>:0 
   at UIKit.UIApplication.Main (System.String[] args, System.String principalClassName, System.String delegateClassName) [0x00038] in <58a9bd8a3cbb4d0092bc0a767ff66c0f>:0 
-  at MyCart.iOS.Application.Main (System.String[] args) [0x00000] in <dab30c17c17940a39b8d2ac2c9714730>:0 
-2017-07-28 15:52:40.758 MyCart.iOS[3534:317155] critical: Stacktrace:
+  at MyCart.iOS.Application.Main (System.String[] args) [0x00000] in <a6102eb2debf4f35b3d6d8b9b3c15459>:0 
+2017-08-01 17:22:20.250 MyCart.iOS[5937:361993] critical: Stacktrace:
 
-2017-07-28 15:52:40.759 MyCart.iOS[3534:317155] critical: 
+2017-08-01 17:22:20.250 MyCart.iOS[5937:361993] critical: 
 Native stacktrace:
 
-2017-07-28 15:52:40.814 MyCart.iOS[3534:317155] critical: 	0   MyCart.iOS                          0x000000010efe7c41 mono_handle_native_crash + 257
-2017-07-28 15:52:40.814 MyCart.iOS[3534:317155] critical: 	1   libsystem_platform.dylib            0x000000011bcb5b3a _sigtramp + 26
-2017-07-28 15:52:40.814 MyCart.iOS[3534:317155] critical: 	2   ???                                 0x000000010f4f50e0 0x0 + 4551823584
-2017-07-28 15:52:40.814 MyCart.iOS[3534:317155] critical: 	3   libsystem_c.dylib                   0x000000011ba2488f abort + 127
-2017-07-28 15:52:40.815 MyCart.iOS[3534:317155] critical: 	4   MyCart.iOS                          0x000000010f17eae2 xamarin_unhandled_exception_handler + 34
-2017-07-28 15:52:40.815 MyCart.iOS[3534:317155] critical: 	5   MyCart.iOS                          0x000000010f047f24 mono_invoke_unhandled_exception_hook + 148
-2017-07-28 15:52:40.815 MyCart.iOS[3534:317155] critical: 	6   MyCart.iOS                          0x000000010efe79a1 mono_handle_exception_internal + 4913
-2017-07-28 15:52:40.815 MyCart.iOS[3534:317155] critical: 	7   MyCart.iOS                          0x000000010efe6668 mono_handle_exception + 24
-2017-07-28 15:52:40.815 MyCart.iOS[3534:317155] critical: 	8   MyCart.iOS                          0x000000010ef6a56f mono_amd64_throw_exception + 143
-2017-07-28 15:52:40.815 MyCart.iOS[3534:317155] critical: 	9   ???                                 0x000000012dbfbae7 0x0 + 5062507239
-2017-07-28 15:52:40.816 MyCart.iOS[3534:317155] critical: 	10  MyCart.iOS                          0x000000010ef027b3 _ZL32native_to_managed_trampoline_203P11objc_objectP13objc_selectorPP11_MonoMethodP22UITapGestureRecognizerj + 435
-2017-07-28 15:52:40.816 MyCart.iOS[3534:317155] critical: 	11  MyCart.iOS                          0x000000010ef025f8 -[__UITapGestureRecognizer target:] + 56
-2017-07-28 15:52:40.816 MyCart.iOS[3534:317155] critical: 	12  UIKit                               0x0000000110826f59 -[UIGestureRecognizerTarget _sendActionWithGestureRecognizer:] + 57
-2017-07-28 15:52:40.816 MyCart.iOS[3534:317155] critical: 	13  UIKit                               0x000000011082ed57 _UIGestureRecognizerSendTargetActions + 109
-2017-07-28 15:52:40.816 MyCart.iOS[3534:317155] critical: 	14  UIKit                               0x000000011082c70b _UIGestureRecognizerSendActions + 225
-2017-07-28 15:52:40.816 MyCart.iOS[3534:317155] critical: 	15  UIKit                               0x000000011082b9ce -[UIGestureRecognizer _updateGestureWithEvent:buttonEvent:] + 981
-2017-07-28 15:52:40.817 MyCart.iOS[3534:317155] critical: 	16  UIKit                               0x0000000110818152 _UIGestureEnvironmentUpdate + 1219
-2017-07-28 15:52:40.817 MyCart.iOS[3534:317155] critical: 	17  UIKit                               0x0000000110817c43 -[UIGestureEnvironment _deliverEvent:toGestureRecognizers:usingBlock:] + 484
-2017-07-28 15:52:40.817 MyCart.iOS[3534:317155] critical: 	18  UIKit                               0x0000000110816e0a -[UIGestureEnvironment _updateGesturesForEvent:window:] + 274
-2017-07-28 15:52:40.817 MyCart.iOS[3534:317155] critical: 	19  UIKit                               0x0000000110362eea -[UIWindow sendEvent:] + 4092
-2017-07-28 15:52:40.817 MyCart.iOS[3534:317155] critical: 	20  UIKit                               0x000000011030fa84 -[UIApplication sendEvent:] + 352
-2017-07-28 15:52:40.817 MyCart.iOS[3534:317155] critical: 	21  UIKit                               0x0000000110af35d4 __dispatchPreprocessedEventFromEventQueue + 2926
-2017-07-28 15:52:40.818 MyCart.iOS[3534:317155] critical: 	22  UIKit                               0x0000000110aeb532 __handleEventQueue + 1122
-2017-07-28 15:52:40.818 MyCart.iOS[3534:317155] critical: 	23  CoreFoundation                      0x000000011a58dc01 __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 17
-2017-07-28 15:52:40.818 MyCart.iOS[3534:317155] critical: 	24  CoreFoundation                      0x000000011a5730cf __CFRunLoopDoSources0 + 527
-2017-07-28 15:52:40.818 MyCart.iOS[3534:317155] critical: 	25  CoreFoundation                      0x000000011a5725ff __CFRunLoopRun + 911
-2017-07-28 15:52:40.818 MyCart.iOS[3534:317155] critical: 	26  CoreFoundation                      0x000000011a572016 CFRunLoopRunSpecific + 406
-2017-07-28 15:52:40.818 MyCart.iOS[3534:317155] critical: 	27  GraphicsServices                    0x000000011b1f3a24 GSEventRunModal + 62
-2017-07-28 15:52:40.819 MyCart.iOS[3534:317155] critical: 	28  UIKit                               0x00000001102f2134 UIApplicationMain + 159
-2017-07-28 15:52:40.819 MyCart.iOS[3534:317155] critical: 	29  ???                                 0x00000001300024f5 0x0 + 5100283125
-2017-07-28 15:52:40.819 MyCart.iOS[3534:317155] critical: 	30  ???                                 0x0000000130002360 0x0 + 5100282720
-2017-07-28 15:52:40.819 MyCart.iOS[3534:317155] critical: 
+2017-08-01 17:22:20.258 MyCart.iOS[5937:361993] critical: 	0   MyCart.iOS                          0x0000000108e41c41 mono_handle_native_crash + 257
+2017-08-01 17:22:20.258 MyCart.iOS[5937:361993] critical: 	1   libsystem_platform.dylib            0x0000000115b12b3a _sigtramp + 26
+2017-08-01 17:22:20.258 MyCart.iOS[5937:361993] critical: 	2   ???                                 0x000000010934f0e0 0x0 + 4449431776
+2017-08-01 17:22:20.258 MyCart.iOS[5937:361993] critical: 	3   libsystem_c.dylib                   0x000000011588188f abort + 127
+2017-08-01 17:22:20.258 MyCart.iOS[5937:361993] critical: 	4   MyCart.iOS                          0x0000000108fd8ae2 xamarin_unhandled_exception_handler + 34
+2017-08-01 17:22:20.259 MyCart.iOS[5937:361993] critical: 	5   MyCart.iOS                          0x0000000108ea1f24 mono_invoke_unhandled_exception_hook + 148
+2017-08-01 17:22:20.259 MyCart.iOS[5937:361993] critical: 	6   MyCart.iOS                          0x0000000108e419a1 mono_handle_exception_internal + 4913
+2017-08-01 17:22:20.259 MyCart.iOS[5937:361993] critical: 	7   MyCart.iOS                          0x0000000108e40668 mono_handle_exception + 24
+2017-08-01 17:22:20.259 MyCart.iOS[5937:361993] critical: 	8   MyCart.iOS                          0x0000000108dc456f mono_amd64_throw_exception + 143
+2017-08-01 17:22:20.259 MyCart.iOS[5937:361993] critical: 	9   ???                                 0x0000000127a55ae7 0x0 + 4960115431
+2017-08-01 17:22:20.259 MyCart.iOS[5937:361993] critical: 	10  MyCart.iOS                          0x0000000108d1f96c _ZL31native_to_managed_trampoline_10P11objc_objectP13objc_selectorPP11_MonoMethodj + 284
+2017-08-01 17:22:20.260 MyCart.iOS[5937:361993] critical: 	11  MyCart.iOS                          0x0000000108d26ba4 -[__MonoMac_NSAsyncActionDispatcher xamarinApplySelector] + 52
+2017-08-01 17:22:20.260 MyCart.iOS[5937:361993] critical: 	12  Foundation                          0x000000010be87fd1 __NSThreadPerformPerform + 334
+2017-08-01 17:22:20.260 MyCart.iOS[5937:361993] critical: 	13  CoreFoundation                      0x00000001143f1c01 __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 17
+2017-08-01 17:22:20.260 MyCart.iOS[5937:361993] critical: 	14  CoreFoundation                      0x00000001143d70cf __CFRunLoopDoSources0 + 527
+2017-08-01 17:22:20.260 MyCart.iOS[5937:361993] critical: 	15  CoreFoundation                      0x00000001143d65ff __CFRunLoopRun + 911
+2017-08-01 17:22:20.260 MyCart.iOS[5937:361993] critical: 	16  CoreFoundation                      0x00000001143d6016 CFRunLoopRunSpecific + 406
+2017-08-01 17:22:20.261 MyCart.iOS[5937:361993] critical: 	17  GraphicsServices                    0x0000000115050a24 GSEventRunModal + 62
+2017-08-01 17:22:20.261 MyCart.iOS[5937:361993] critical: 	18  UIKit                               0x000000010a14c134 UIApplicationMain + 159
+2017-08-01 17:22:20.261 MyCart.iOS[5937:361993] critical: 	19  ???                                 0x0000000129e564f5 0x0 + 4997866741
+2017-08-01 17:22:20.261 MyCart.iOS[5937:361993] critical: 	20  ???                                 0x0000000129e56360 0x0 + 4997866336
+2017-08-01 17:22:20.261 MyCart.iOS[5937:361993] critical: 
 =================================================================
 Got a SIGABRT while executing native code. This usually indicates
 a fatal error in the mono runtime or one of the native libraries 

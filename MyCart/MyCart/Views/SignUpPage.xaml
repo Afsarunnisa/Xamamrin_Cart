@@ -1,49 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-            x:Class="MyCart.Views.SignUpPage">
+            x:Class="MyCart.Views.SignUpPage"
+            Title="Sign Up">
 	<ContentPage.Content>
 
 
-        <StackLayout Spacing="20" x:Name="layout">
+        <StackLayout Padding = "20" Spacing="20" x:Name="layout">
 
-             <StackLayout  Spacing="20" >
-                <Label Text="FirstName" FontSize="20" 
-                 VerticalOptions="Center" FontAttributes="Bold" />
+             <StackLayout  Spacing="10" >
+                <Label Text="FirstName" FontSize="16" 
+                 VerticalOptions="Center" FontAttributes="Bold">
+
+                     <Label.FontFamily>
+                                    <OnPlatform x:TypeArguments="x:String">
+                                        <OnPlatform.iOS>SourceSansPro-Regular</OnPlatform.iOS>
+                                        <OnPlatform.Android></OnPlatform.Android>
+                                        <OnPlatform.WinPhone></OnPlatform.WinPhone>
+                                    </OnPlatform>
+                                      </Label.FontFamily>
+                    
+                </Label> 
                 <Entry TextColor="Black" Text="{Binding SignUpUserObject.firstName}"
                   HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" />
             </StackLayout>
 
-              <StackLayout  Spacing="20" >
-                <Label Text="LastName" FontSize="20" 
-                 VerticalOptions="Center" FontAttributes="Bold" />
+              <StackLayout  Spacing="10" >
+                <Label Text="LastName" FontSize="16" 
+                 VerticalOptions="Center" FontAttributes="Bold">
+
+                     <Label.FontFamily>
+                                    <OnPlatform x:TypeArguments="x:String">
+                                        <OnPlatform.iOS>SourceSansPro-Regular</OnPlatform.iOS>
+                                        <OnPlatform.Android></OnPlatform.Android>
+                                        <OnPlatform.WinPhone></OnPlatform.WinPhone>
+                                    </OnPlatform>
+                                      </Label.FontFamily>
+
+                </Label>
                 <Entry TextColor="Black" Text="{Binding SignUpUserObject.lastName}"
                   HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" />
             </StackLayout>
 
-             <StackLayout  Spacing="20" >
-                <Label Text="Email" FontSize="20" 
-                 VerticalOptions="Center" FontAttributes="Bold" />
+             <StackLayout  Spacing="10" >
+                <Label Text="Email" FontSize="16" 
+                 VerticalOptions="Center" FontAttributes="Bold">
+
+                     <Label.FontFamily>
+                                    <OnPlatform x:TypeArguments="x:String">
+                                        <OnPlatform.iOS>SourceSansPro-Regular</OnPlatform.iOS>
+                                        <OnPlatform.Android></OnPlatform.Android>
+                                        <OnPlatform.WinPhone></OnPlatform.WinPhone>
+                                    </OnPlatform>
+                                      </Label.FontFamily>
+
+                </Label>
                 <Entry TextColor="Black" Text="{Binding SignUpUserObject.email}"
                   HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" />
             </StackLayout>
             
-            <StackLayout  Spacing="20" >
-                <Label Text="User Name" FontSize="20" 
-                 VerticalOptions="Center" FontAttributes="Bold" />
+            <StackLayout  Spacing="10" >
+                <Label Text="User Name" FontSize="16" 
+                 VerticalOptions="Center" FontAttributes="Bold">
+
+                     <Label.FontFamily>
+                                    <OnPlatform x:TypeArguments="x:String">
+                                        <OnPlatform.iOS>SourceSansPro-Regular</OnPlatform.iOS>
+                                        <OnPlatform.Android></OnPlatform.Android>
+                                        <OnPlatform.WinPhone></OnPlatform.WinPhone>
+                                    </OnPlatform>
+                                      </Label.FontFamily>
+                    
+                </Label> 
                 <Entry TextColor="Black" Text="{Binding SignUpUserObject.username}"
                   HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" />
             </StackLayout>
 
-              <StackLayout  Spacing="20" >
-                <Label Text="Password" FontSize="20" 
-                 VerticalOptions="Center" FontAttributes="Bold" />
+              <StackLayout  Spacing="10" >
+                <Label Text="Password" FontSize="16" 
+                 VerticalOptions="Center" FontAttributes="Bold">
+
+                     <Label.FontFamily>
+                                    <OnPlatform x:TypeArguments="x:String">
+                                        <OnPlatform.iOS>SourceSansPro-Regular</OnPlatform.iOS>
+                                        <OnPlatform.Android></OnPlatform.Android>
+                                        <OnPlatform.WinPhone></OnPlatform.WinPhone>
+                                    </OnPlatform>
+                                      </Label.FontFamily>
+
+                    
+                </Label> 
                 <Entry TextColor="Black" Text="{Binding SignUpUserObject.password}"
                   HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" />
             </StackLayout>
 
                <Button x:Name = "SignButton" Text="SignUp" TextColor="White" BackgroundColor=
-"#77D065" Command="{Binding SignUpBtnCommand}" VerticalOptions="End"/>
+"#06A2CB" Command="{Binding SignUpBtnCommand}" HeightRequest ="36" Opacity="0.8" VerticalOptions="End">
+
+
+                         <Button.FontFamily>
+                                    <OnPlatform x:TypeArguments="x:String">
+                                        <OnPlatform.iOS>SourceSansPro-Regular</OnPlatform.iOS>
+                                        <OnPlatform.Android></OnPlatform.Android>
+                                        <OnPlatform.WinPhone></OnPlatform.WinPhone>
+                                    </OnPlatform>
+                                      </Button.FontFamily>
+                    
+                
+
+            </Button>
             
         </StackLayout>
 
